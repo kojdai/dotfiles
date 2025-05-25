@@ -61,4 +61,4 @@ packadd! matchit " enable matchit plugin: extend % to match HTML tags, if/else/e
 :set list " display invisible characters (tabs, spaces, line endings, etc.)"
 :set listchars=tab:>-,trail:- " display tab as ->"
 :set iskeyword=@,48-57,_,192-255,- " Define what characters are considered part of a keyword for word-based commands"
-
+:set tabstop=2 " set tab size as 2"
