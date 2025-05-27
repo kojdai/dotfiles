@@ -62,8 +62,9 @@ set nrformats-=octal
 syntax enable
 "enable filetype detection, plugins, and indent"
 filetype plugin indent on
-"use 'jk' to exit insert mode"
+"use 'jk' to exit insert mode even if it is full-width character"
 imap jk <Esc>
+imap ｊｋ <Esc>
 "use '\(' to wrap word with ()"
 :map \( i(<Esc>ea)<Esc>
 "use '\{' to wrap word with {}"
@@ -95,3 +96,4 @@ nmap <Leader>l $
 " emphasize cursorline"
 :set cursorline
 :highlight CursorLine cterm=NONE ctermfg=white ctermbg=DarkGray
+
