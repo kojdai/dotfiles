@@ -62,8 +62,9 @@ set nrformats-=octal
 syntax enable
 "enable filetype detection, plugins, and indent"
 filetype plugin indent on
-"use 'jk' to exit insert mode"
+"use 'jk' to exit insert mode even if it is full-width character"
 imap jk <Esc>
+imap ｊｋ <Esc>
 "use '\(' to wrap word with ()"
 :map \( i(<Esc>ea)<Esc>
 "use '\{' to wrap word with {}"
@@ -95,6 +96,7 @@ nmap <Leader>l $
 " emphasize cursorline"
 :set cursorline
 :highlight CursorLine cterm=NONE ctermfg=white ctermbg=DarkGray
+<<<<<<< HEAD
 nnoremap j gj
 nnoremap k gk
 " disable swp file"
@@ -105,3 +107,6 @@ set nobackup
 set noundofile
 " disable beep sound"
 set belloff=all
+=======
+
+>>>>>>> b2307308592e846f63aa9e4c1d30a48ce179ed32
