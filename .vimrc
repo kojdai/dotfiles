@@ -97,4 +97,17 @@ nmap <Leader>l $
 " emphasize cursorline"
 :set cursorline
 :highlight CursorLine cterm=NONE ctermfg=white ctermbg=DarkGray
+<<<<<<< HEAD
+nnoremap j gj
+nnoremap k gk
+" disable swp file"
+set noswapfile
+" disable backup file"
+set nobackup
+" disable undo file"
+set noundofile
+" disable beep sound"
+set belloff=all
+=======
 
+>>>>>>> b2307308592e846f63aa9e4c1d30a48ce179ed32
