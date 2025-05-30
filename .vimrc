@@ -85,6 +85,7 @@ packadd! matchit
 :set iskeyword=@,48-57,_,192-255,-
 "set tab size as 2"
 :set tabstop=2
+:set shiftwidth=2
 "set leader key as Space key"
 let mapleader = "\<Space>"
 "select all"
