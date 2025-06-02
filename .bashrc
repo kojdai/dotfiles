@@ -115,3 +115,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# aliasを作成してコマンドが実行できるように
+alias nvim=~/.local/bin/nvim

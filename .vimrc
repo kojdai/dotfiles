@@ -5,7 +5,7 @@ if v:progname =~? "evim"
 endif
 
 "Get the defaults that most users want.
-source $VIMRUNTIME/defaults.vim
+" source $VIMRUNTIME/defaults.vim
 
 if has("vms")
   set nobackup		"do not keep a backup file, use versions instead
@@ -65,6 +65,7 @@ filetype plugin indent on
 "use 'jk' to exit insert mode even if it is full-width character"
 imap jk <Esc>
 imap ｊｋ <Esc>
+vmap jk <Esc>
 "use '\(' to wrap word with ()"
 :map \( i(<Esc>ea)<Esc>
 "use '\{' to wrap word with {}"
