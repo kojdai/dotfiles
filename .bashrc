@@ -91,6 +91,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+alias exp='explorer.exe .'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -118,3 +119,6 @@ fi
 
 # aliasを作成してコマンドが実行できるように
 alias nvim=~/.local/bin/nvim
+
+export PATH="$PATH:/usr/local/gcc-arm-none-eabi-7-2018-q2-update/bin"
+export PATH="/mnt/c/Users/rsdlab/spresenseenv/usr/bin/:$PATH"
