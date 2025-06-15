@@ -70,6 +70,8 @@ vmap jk <Esc>
 :map \( i(<Esc>ea)<Esc>
 "use '\{' to wrap word with {}"
 :map \{ i{<Esc>ea}<Esc>
+"use '\[' to wrap word with []"
+:map \[ i[<Esc>ea]<Esc>
 "use '\$' to wrap word with $$"
 :map \$ i$<Esc>ea$<Esc>
 "enable matchit plugin: extend % to match HTML tags, if/else/endif, etc."
