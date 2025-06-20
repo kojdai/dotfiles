@@ -1,0 +1,134 @@
+-- ==================================================
+-- Initialization
+-- ==================================================
+-- (evim判定は不要)
+
+-- ==================================================
+-- Backup, Undo, Swap Settings
+-- ==================================================
+local home = vim.env.HOME
+vim.opt.backup = true
+vim.opt.writebackup = true
+vim.opt.undofile = true
+-- ディレクトリは必ず絶対パスで指定。環境変数を展開する
+vim.opt.undodir   = { home .. "/.config/nvim/undo//" }
+vim.opt.backupdir = { home .. "/.config/nvim/backup//" }
+vim.opt.directory = { home .. "/.config/nvim/swap//" }
+
+-- 必要ならディレクトリを自動作成
+local function ensure_dir(path)
+  if vim.fn.isdirectory(path) == 0 then
+    vim.fn.mkdir(path, "p")
+  end
+end
+ensure_dir(home .. "/.config/nvim/undo/")
+ensure_dir(home .. "/.config/nvim/backup/")
+ensure_dir(home .. "/.config/nvim/swap/")
+
+-- ==================================================
+-- Search Settings
+-- ==================================================
+vim.opt.hlsearch = true
+vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.incsearch = true
+vim.opt.wrapscan = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- ==================================================
+-- Editing Behavior
+-- ==================================================
+vim.opt.backspace = { "indent", "eol", "start" }
+vim.opt.clipboard = "unnamedplus"
+vim.opt.history = 200
+vim.opt.ruler = true
+vim.opt.showcmd = true
+vim.opt.ttimeout = true
+vim.opt.ttimeoutlen = 100
+vim.opt.nrformats:remove("octal")
+vim.opt.autoindent = true
+vim.opt.showmatch = true
+vim.opt.smartindent = true
+vim.opt.textwidth = 80
+
+-- ==================================================
+-- Syntax and Filetype
+-- ==================================================
+vim.cmd("syntax enable")
+vim.cmd("colorscheme darkblue")
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    vim.cmd('highlight Comment ctermfg=2 guifg=#008800')
+  end
+})
+vim.cmd("filetype plugin indent on")
+vim.opt.encoding = "utf-8"
+vim.opt.fileformats = { "unix", "dos", "mac" }
+
+-- ==================================================
+-- Plugin and Package Management
+-- ==================================================
+vim.cmd("packadd! matchit")
+
+-- ==================================================
+-- Key Mappings
+-- ==================================================
+vim.g.mapleader = " "
+local map = vim.keymap.set
+local opts = { noremap = true, silent = true }
+
+map("i", "jk", "<Esc>", opts)
+map("i", "ｊｋ", "<Esc>", opts)
+map("v", "jk", "<Esc>", opts)
+
+map("n", [[\(]], "i(<Esc>ea)<Esc>", { noremap = true })
+map("n", [[\{]], "i{<Esc>ea}<Esc>", { noremap = true })
+map("n", [[\[']], "i[<Esc>ea]<Esc>", { noremap = true })
+map("n", [[\$]], "i$<Esc>ea$<Esc>", { noremap = true })
+
+map("n", "<Leader>a", "ggVG", opts)
+map("n", "<Leader><Leader>h", "0", opts)
+map("n", "<Leader>h", "^", opts)
+map("n", "<Leader>l", "$", opts)
+map("n", "Y", "y$", opts)
+
+-- ==================================================
+-- Display and Interface
+-- ==================================================
+vim.opt.sidescroll = 10
+vim.opt.whichwrap = "b,s,<,>,[,],h,l"
+vim.opt.list = true
+vim.opt.listchars = { tab = ">-", trail = "-" }
+vim.opt.cursorline = true
+vim.cmd("highlight CursorLine cterm=NONE ctermfg=white ctermbg=DarkGray")
+vim.opt.iskeyword = "@,48-57,_,192-255,-"
+vim.opt.helplang = { "ja", "en" }
+
+-- ==================================================
+-- Tabs and Indentation
+-- ==================================================
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+
+-- ==================================================
+-- Navigation Improvements
+-- ==================================================
+map("n", "j", "gj", opts)
+map("n", "k", "gk", opts)
+
+-- ==================================================
+-- File Handling and Performance
+-- ==================================================
+vim.opt.swapfile = false
+vim.opt.autoread = true
+
+-- ==================================================
+-- Miscellaneous
+-- ==================================================
+vim.opt.belloff = "all"
+vim.opt.title = true
+
