@@ -17,13 +17,14 @@ if has("vms")
 else
 	" Keep a backup file (restore to previous version)
 	set backup
-	" Keep an undo file (undo changes after closing)
-	if has('persistent_undo')
-		set undofile
-	endif
 endif
 
-set undodir=~/.vim/undodir | set undofile
+" Keep an undo file (undo changes after closing)
+" persistent_undoが利用可能な場合のみ有効化し、undodirを設定
+if has('persistent_undo')
+	set undofile
+	set undodir=~/.vim/undodir
+endif
 
 
 "==================================================
@@ -65,7 +66,7 @@ set backspace=indent,eol,start
 set clipboard=unnamedplus
 
 " Keep the last 200 commands/search patterns in history
-set history=200
+set history=1000
 
 " Show the cursor position (line, column) in the status line
 set ruler
@@ -81,9 +82,6 @@ set ttimeoutlen=100
 
 " Disable octal number interpretation for numbers starting with 0
 set nrformats-=octal
-
-" Enable automatic indentation
-set autoindent
 
 " Briefly jump to matching bracket when inserting one
 set showmatch
@@ -145,34 +143,38 @@ imap ｊｋ <Esc>
 vmap jk <Esc>
 
 " Wrap word with ()
-:map \( i(<Esc>ea)<Esc>
+noremap \( i(<Esc>ea)<Esc>
 
 " Wrap word with {}
-:map \{ i{<Esc>ea}<Esc>
+noremap \{ i{<Esc>ea}<Esc>
 
 " Wrap word with []
-:map \[ i[<Esc>ea]<Esc>
+noremap \[ i[<Esc>ea]<Esc>
 
 " Wrap word with $$
-:map \$ i$<Esc>ea$<Esc>
+noremap \$ i$<Esc>ea$<Esc>
 
 " Set the leader key to Space
 let mapleader = "\<Space>"
 
 " Select all text
-nmap <Leader>a ggVG
+noremap <Leader>a ggVG
 
 " Move to the beginning of the line with <Leader>h
-nmap <Leader><Leader>h 0
+noremap <Leader><Leader>h 0
 
 " Move to the head chalactor of the line with <Leader><Leader>h"
-nmap <Leader>h ^
+noremap <Leader>h ^
 
 " Move to the end of the line with <Leader>l
-nmap <Leader>l $
+noremap <Leader>l $
 
 " Makes "Y" behave like "D" and "C": yanks (copies) from the cursor to the end of the line.
 nnoremap Y y$
+
+" Faster movement for searching
+nnoremap n nzz
+nnoremap N Nzz
 
 "==================================================
 " Display and Interface
@@ -195,7 +197,7 @@ set list
 set cursorline
 
 " Set cursor line highlight color
-highlight CursorLine cterm=NONE ctermfg=white ctermbg=DarkGray
+highlight CursorLine cterm=bold ctermfg=white ctermbg=DarkGray
 
 " Define what characters are considered part of a keyword
 set iskeyword=@,48-57,_,192-255,-
@@ -219,8 +221,6 @@ set shiftwidth=2
 " Number of spaces a <Tab> counts for while performing editing operations
 set softtabstop=2
 
-" Substite all of spaces into tab
-%retab!
 
 "==================================================
 " Navigation Improvements
@@ -242,6 +242,10 @@ set noswapfile
 
 " Automatically reload file if changed outside Vim
 set autoread
+
+" Set command line completion options
+set wildmenu
+set wildmode=longest:full,list:full
 
 
 "==================================================
