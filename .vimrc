@@ -16,8 +16,11 @@ if has("vms")
 	set nobackup
 else
 	" Keep a backup file (restore to previous version)
-	set backup
+	set nobackup
 endif
+
+" Do not create a backup file during write
+set nowritebackup
 
 " Keep an undo file (undo changes after closing)
 " persistent_undoが利用可能な場合のみ有効化し、undodirを設定
@@ -175,6 +178,9 @@ nnoremap Y y$
 " Faster movement for searching
 nnoremap n nzz
 nnoremap N Nzz
+
+" Disable search hilight with <Leader>n
+noremap <Leader>n :nohl<CR>
 
 "==================================================
 " Display and Interface

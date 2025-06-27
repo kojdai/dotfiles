@@ -1,140 +1,54 @@
---==================================================
--- Backup and Undo Settings
---==================================================
-if vim.fn.has("vms") == 1 then
-	vim.opt.backup = false
-else
-	vim.opt.backup = true
-	if vim.fn.has("persistent_undo") == 1 then
-		vim.opt.undofile = true
-	end
+-- 重要なグローバル変数を設定
+-- リーダーキーをスペースに設定
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+-- nvim-matchupとの競合を避けるため、組み込みのmatchitを無効化
+vim.g.loaded_matchit = 1
+
+-- モジュール化された設定ファイルを読み込む
+require('core.options')
+require('core.keymaps')
+require('core.autocmds')
+
+-- lazy.nvimプラグインマネージャーのセットアップ
+local lazypath = vim.fn.stdpath('data').. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- lazy.nvimの最新の安定版
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
-vim.opt.undodir = vim.fn.expand("~/.vim/undodir")
-vim.opt.undofile = true
+-- プラグインを読み込む
+require('lazy').setup('plugins')
 
---==================================================
--- Search Settings
---==================================================
+-- lazy.nvimのパスを設定
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-vim.opt.relativenumber = true
-vim.opt.number = true
-vim.opt.incsearch = true
-vim.opt.wrapscan = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
---==================================================
--- Editing Behavior
---==================================================
-vim.opt.backspace = { "indent", "eol", "start" }
-vim.opt.clipboard = "unnamedplus"
-vim.opt.history = 200
-vim.opt.ruler = true
-vim.opt.showcmd = true
-vim.opt.ttimeout = true
-vim.opt.ttimeoutlen = 100
-vim.opt.nrformats:remove("octal")
-vim.opt.autoindent = true
-vim.opt.showmatch = true
-vim.opt.smartindent = true
-vim.opt.textwidth = 80
-vim.opt.scrolloff = 10
-
---==================================================
--- Syntax and Filetype
---==================================================
-vim.cmd("syntax enable")
-vim.api.nvim_create_autocmd("ColorScheme", {
-	pattern = "*",
-	callback = function()
-		vim.cmd("highlight Comment ctermfg=2 guifg=#008800")
-	end,
-})
-vim.cmd("colorscheme darkblue")
-vim.cmd("filetype plugin indent on")
-vim.opt.encoding = "utf-8"
-vim.opt.fileformats = { "unix", "dos", "mac" }
-
---==================================================
--- Plugin and Package Management
---==================================================
-if vim.fn.has("syntax") == 1 and vim.fn.has("eval") == 1 then
-	vim.cmd("packadd! matchit")
+-- lazy.nvimがインストールされていなければ、GitHubからクローンする
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- lazy.nvimの安定版を使う
+    lazypath,
+  })
 end
+vim.opt.rtp:prepend(lazypath)
 
---==================================================
--- Key Mappings
---==================================================
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-local iopts = { noremap = true }
+-- 基礎的なオプションを設定するファイルを読み込む
+-- require("core.options") -- この行は後でプラグイン設定内に移動する可能性があります
 
--- 'jk'でインサートモード終了
-map("i", "jk", "<Esc>", iopts)
-map("i", "ｊｋ", "<Esc>", iopts)
--- 'jk'でビジュアルモード終了
-map("v", "jk", "<Esc>", iopts)
-
--- 単語を()で囲む
-map("n", [[\(]], [[i(<Esc>ea)<Esc>]], opts)
-map("n", [[\{]], [[i{<Esc>ea}<Esc>]], opts)
-map("n", [[\[]], [[i[<Esc>ea]<Esc>]], opts)
-map("n", [[\$]], [[i$<Esc>ea$<Esc>]], opts)
-
--- LeaderキーをSpaceに
-vim.g.mapleader = " "
-
--- 全選択
-map("n", "<Leader>a", "ggVG", opts)
--- 行頭へ
-map("n", "<Leader><Leader>h", "0", opts)
-map("n", "<Leader>h", "^", opts)
--- 行末へ
-map("n", "<Leader>l", "$", opts)
--- "Y"を"y$"に
-map("n", "Y", "y$", { noremap = true })
-
---==================================================
--- Display and Interface
---==================================================
-vim.opt.sidescroll = 10
-vim.opt.whichwrap = "b", "s", "<", ">", "[", "]", "h", "l" 
-vim.opt.listchars = { tab = ">-", trail = "-", space = "·" }
-vim.opt.list = true
-vim.opt.cursorline = true
-vim.cmd("highlight CursorLine cterm=NONE ctermfg=white ctermbg=DarkGray")
-vim.opt.iskeyword = "@,48-57,_,192-255,-"
-vim.opt.helplang = { "ja", "en" }
-
---==================================================
--- Tabs and Indentation
---==================================================
-vim.opt.expandtab = false
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.softtabstop = 2
-
--- ファイルを開いた時に自動でretab!する
-vim.api.nvim_create_autocmd("BufReadPost", {
-	pattern = "*",
-	command = "retab!"
+-- lazy.nvimをセットアップする
+-- これで "lua/plugins" ディレクトリ内の全 .lua ファイルがプラグインとして読み込まれる
+require("lazy").setup("plugins", {
+  -- 必要に応じてlazy.nvimのオプションをここに設定
 })
-
---==================================================
--- Navigation Improvements
---==================================================
-map("n", "j", "gj", { noremap = true })
-map("n", "k", "gk", { noremap = true })
-
---==================================================
--- File Handling and Performance
---==================================================
-vim.opt.swapfile = false
-vim.opt.autoread = true
-
---==================================================
--- Miscellaneous
---==================================================
-vim.opt.belloff = "all"
-vim.opt.title = true
