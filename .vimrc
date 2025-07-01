@@ -16,7 +16,7 @@ if has("vms")
 	set nobackup
 else
 	" Keep a backup file (restore to previous version)
-	set backup
+	set nobackup
 endif
 
 " Keep an undo file (undo changes after closing)
