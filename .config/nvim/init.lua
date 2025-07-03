@@ -1,14 +1,14 @@
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "--branch=stable",
-    "https://github.com/folke/lazy.nvim.git",
-    lazypath,
-  })
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"--branch=stable",
+		"https://github.com/folke/lazy.nvim.git",
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
@@ -16,7 +16,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Options
 -- =============================================================================
 vim.opt.number = true -- Show line numbers
-vim.opt.relativenumber = true -- Show relative line numbers
 vim.opt.hlsearch = true -- Highlight search results
 vim.opt.incsearch = true -- Enable incremental search
 vim.opt.wrapscan = true -- Searches wrap around end of file
@@ -30,7 +29,8 @@ vim.opt.ruler = true -- Show the cursor position
 vim.opt.showcmd = true -- Show partial commands
 vim.opt.showmatch = true -- Briefly jump to matching bracket
 vim.opt.ttimeout = true -- Enable key code timeout
-vim.opt.ttimeoutlen = 100 -- Set key code timeout length to 100ms
+vim.opt.timeoutlen = 300 -- キーマップのタイムアウトを300msに設定
+vim.opt.ttimeoutlen = 10 -- こちらは短く保つ
 vim.opt.nrformats:remove('octal') -- Disable octal number interpretation
 vim.opt.textwidth = 80 -- Automatically wrap lines at 80 characters
 vim.opt.encoding = 'utf-8' -- Set file encoding to UTF-8
@@ -53,20 +53,20 @@ vim.opt.title = true -- Set the terminal window title
 
 vim.opt.list = true
 vim.opt.listchars = {
-  tab = '>-',
-  trail = '·',
-  extends = '»',
-  precedes = '«',
-  nbsp = '␣',
+	tab = '>-',
+	trail = '·',
+	extends = '»',
+	precedes = '«',
+	nbsp = '␣',
 }
 -- Set up persistent undo
 if vim.fn.has('persistent_undo') == 1 then
-  local undodir = vim.fn.stdpath('data') .. '/undodir'
-  if vim.fn.isdirectory(undodir) == 0 then
-    vim.fn.mkdir(undodir, 'p')
-  end
-  vim.opt.undofile = true
-  vim.opt.undodir = undodir
+	local undodir = vim.fn.stdpath('data') .. '/undodir'
+	if vim.fn.isdirectory(undodir) == 0 then
+		vim.fn.mkdir(undodir, 'p')
+	end
+	vim.opt.undofile = true
+	vim.opt.undodir = undodir
 end
 
 -- =============================================================================
@@ -74,186 +74,173 @@ end
 -- =============================================================================
 vim.g.mapleader = ' ' -- Set leader key to Space
 
-local function map(mode, lhs, rhs, opts)
-  local options = { noremap = true, silent = true }
-  if opts then
-    options = vim.tbl_extend('force', options, opts)
-  end
-  vim.keymap.set(mode, lhs, rhs, options)
-end
-
 -- Exit insert/visual mode
-map('i', 'jk', '<Esc>')
-map('i', 'ｊｋ', '<Esc>') -- Full-width characters
-map('v', 'jk', '<Esc>')
+vim.keymap.set({'i', 'v'}, 'jk', '<Esc>', { noremap = true, silent = true })
+vim.keymap.set({'i', 'v'}, 'ｊｋ', '<Esc>', { noremap = true, silent = true })
+
 -- Wrap word with delimiters
-map('n', '\\(', 'i(<Esc>ea)<Esc>')
-map('n', '\\{', 'i{<Esc>ea}<Esc>')
-map('n', '\\[', 'i[<Esc>ea]<Esc>')
-map('n', '\\$', 'i$<Esc>ea$<Esc>')
+vim.keymap.set('n', '\\(', 'i(<Esc>ea)<Esc>', { noremap = true, silent = true })
+vim.keymap.set('n', '\\{', 'i{<Esc>ea}<Esc>', { noremap = true, silent = true })
+vim.keymap.set('n', '\\[', 'i[<Esc>ea]<Esc>', { noremap = true, silent = true })
+vim.keymap.set('n', '\\$', 'i$<Esc>ea$<Esc>', { noremap = true, silent = true })
 -- Select all
-map('n', '<Leader>a', 'ggVG')
+vim.keymap.set('n', '<Leader>a', 'ggVG', { noremap = true, silent = true })
 -- Line navigation
-map('n', '<Leader><Leader>h', '0')
-map('n', '<Leader>h', '^')
-map('n', '<Leader>l', '$')
+vim.keymap.set('n', '<Leader><Leader>h', '0', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>h', '^', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>l', '$', { noremap = true, silent = true })
 -- Yank to end of line
-map('n', 'Y', 'y$')
+vim.keymap.set('n', 'Y', 'y$', { noremap = true, silent = true })
 -- Center screen on search
-map('n', 'n', 'nzz')
-map('n', 'N', 'Nzz')
+vim.keymap.set('n', 'n', 'nzz', { noremap = true, silent = true })
+vim.keymap.set('n', 'N', 'Nzz', { noremap = true, silent = true })
 -- Clear search highlight
-map('n', '<Leader>n', ':nohl<CR>')
+vim.keymap.set('n', '<Leader>n', ':nohl<CR>', { noremap = true, silent = true })
 -- Wrap-aware movement
-map('n', 'j', 'gj')
-map('n', 'k', 'gk')
+vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
+vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
 
 -- =============================================================================
 -- Plugins
 -- =============================================================================
 require('lazy').setup({
-  spec = {
-    -- Foundational plugin for syntax-aware features
-    {
-      'nvim-treesitter/nvim-treesitter',
-      build = ':TSUpdate',
-      config = function()
-        require('nvim-treesitter.configs').setup({
-          ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query', 'javascript', 'typescript', 'html', 'css', 'json', 'yaml', 'markdown', 'markdown_inline' },
-          sync_install = false,
-          auto_install = true,
-          highlight = { enable = true },
-          indent = { enable = true },
-          matchup = { enable = true },
-        })
-      end,
-    },
+	spec = {
+		-- カラースキーム
+		{
+			"rafi/awesome-vim-colorschemes",
+			lazy = false,
+			priority = 1000,
+			config = function()
+				-- このif文は削除しました。カラースキームはlazy.nvimで管理するため
+				vim.cmd.colorscheme "darkblue"
+			end,
+		},
 
-    -- Modern replacement for matchit
-    {
-      'andymass/vim-matchup',
-      event = 'VeryLazy',
-    },
+		-- treesitter
+		{
+			'nvim-treesitter/nvim-treesitter',
+			build = ':TSUpdate',
+			event = { "BufReadPost", "BufNewFile" },
+			config = function()
+				require('nvim-treesitter.configs').setup({
+					ensure_installed = { 'c', 'lua', 'vim', 'vimdoc', 'query', 'javascript', 'typescript', 'html', 'css', 'json', 'yaml', 'markdown', 'markdown_inline' },
+					sync_install = false,
+					auto_install = true,
+					highlight = { enable = true },
+					indent = { enable = true },
+				})
+			end,
+		},
 
-    -- LSP / Auto-completion Plugins --
-    -----------------------------------
+		-- matchup
+		{
+			'andymass/vim-matchup',
+			event = 'VeryLazy',
+		},
 
-    -- LSP installer and manager
-    { "williamboman/mason.nvim", config = function() require("mason").setup() end },
+		-- LSP / Auto-completion Plugins --
+		{ "williamboman/mason.nvim", cmd = "Mason" },
+		{ "williamboman/mason-lspconfig.nvim" },
 
-    -- Bridge between mason and lspconfig
-    { "williamboman/mason-lspconfig.nvim" },
+		{
+			'neovim/nvim-lspconfig',
+			dependencies = { 'mason-lspconfig.nvim' },
+			ft = { "lua", "javascript", "typescript", "html", "css", "yaml", "json" },
+			config = function()
+				vim.diagnostic.config({
+					virtual_text = true,
+					update_in_insert = false,
+				})
 
-    -- LSP (Language Server Protocol) foundation
-    {
-      'neovim/nvim-lspconfig',
-      dependencies = { 'williamboman/mason-lspconfig.nvim' },
-      config = function()
-        -- LSPサーバーが起動した時にキーマップなどを設定するためのautocmd
-        vim.api.nvim_create_autocmd('LspAttach', {
-          group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-          callback = function(ev)
-            local buf_map = function(mode, lhs, rhs)
-              map(mode, lhs, rhs, { buffer = ev.buf, silent = true })
-            end
-            -- LSP関連のキーマップ
-            buf_map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
-            buf_map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
-            buf_map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
-            buf_map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
-            buf_map('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-            buf_map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
-          end,
-        })
+				local on_attach = function(client, bufnr)
+					local buf_map = function(mode, lhs, rhs)
+						vim.keymap.set(mode, lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
+					end
+					-- LSP関連のキーマップ
+					buf_map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+					buf_map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
+					buf_map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>')
+					buf_map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>')
+					buf_map('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
+					buf_map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
+				end
 
-        local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        local servers = { "lua_ls", "ts_ls", "html", "cssls" } -- ts_lsをtsserverに変更
+				local capabilities = require('cmp_nvim_lsp').default_capabilities()
+				-- 'ts_ls' を 'tsserver' に修正
+				local servers = { "lua_ls", "tsserver", "html", "cssls" }
 
-        -- mason-lspconfigでサーバーをインストール
-        require('mason-lspconfig').setup({
-          ensure_installed = servers,
-        })
+				require('mason-lspconfig').setup({
+					ensure_installed = servers,
+				})
 
-        -- lspconfigで各サーバーを設定
-        for _, server_name in ipairs(servers) do
-          require('lspconfig')[server_name].setup({
-            capabilities = capabilities,
-          })
-        end
-      end,
-    },
+				for _, server_name in ipairs(servers) do
+					require('lspconfig')[server_name].setup({
+						on_attach = on_attach,
+						capabilities = capabilities,
+					})
+				end
+			end,
+		},
 
-    -- Completion engine
-    {
-      'hrsh7th/nvim-cmp',
-      dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
-      config = function()
-        local cmp = require('cmp')
-        local luasnip = require('luasnip')
-        cmp.setup({
-          snippet = {
-            expand = function(args)
-              luasnip.lsp_expand(args.body)
-            end,
-          },
-          mapping = cmp.mapping.preset.insert({
-            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-            ['<C-f>'] = cmp.mapping.scroll_docs(4),
-            ['<C-Space>'] = cmp.mapping.complete(),
-            ['<C-e>'] = cmp.mapping.abort(),
-            ['<CR>'] = cmp.mapping.confirm({ select = true }),
-          }),
-          sources = cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = 'luasnip' },
-          }, {
-            { name = 'buffer' },
-          }),
-        })
-      end,
-    },
-    { 'L3MON4D3/LuaSnip', dependencies = { "rafamadriz/friendly-snippets" } },
-    { 'hrsh7th/cmp-nvim-lsp' },
-    { 'saadparwaiz1/cmp_luasnip' },
+		-- Completion engine
+		{
+			'hrsh7th/nvim-cmp',
+			event = "InsertEnter",
+			dependencies = { 'hrsh7th/cmp-nvim-lsp', 'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip' },
+			config = function()
+				local cmp = require('cmp')
+				local luasnip = require('luasnip') -- luasnipをローカル変数として定義
+				cmp.setup({
+					snippet = {
+						expand = function(args)
+							luasnip.lsp_expand(args.body)
+						end,
+					},
+					mapping = cmp.mapping.preset.insert({
+						['<C-b>'] = cmp.mapping.scroll_docs(-4),
+						['<C-f>'] = cmp.mapping.scroll_docs(4),
+						['<C-Space>'] = cmp.mapping.complete(),
+						['<C-e>'] = cmp.mapping.abort(),
+						['<CR>'] = cmp.mapping.confirm({ select = true }),
+					}),
+					sources = cmp.config.sources({
+						{ name = 'nvim_lsp' },
+						{ name = 'luasnip' },
+					}, {
+						{ name = 'buffer' },
+					}),
+				})
+			end,
+		},
+		{ 'hrsh7th/cmp-nvim-lsp', event = "InsertEnter" },
+		{ 'L3MON4D3/LuaSnip', event = "InsertEnter", dependencies = { "rafamadriz/friendly-snippets" } },
+		{ 'saadparwaiz1/cmp_luasnip', event = "InsertEnter" },
 
-    -- === 日本語入力(skkeleton)の設定 ===
-    {
-      "vim-skk/skkeleton",
-      lazy = true, -- 起動完了後に読み込む
-      dependencies = { "vim-denops/denops.vim" },
-      config = function()
-        vim.fn["skkeleton#config"]({
-          globalDictionaries = { "~/.config/skk/SKK-JISYO.L" },
-          eggLikeNewline = true,
-          userJisyo = "~/.config/skk/SKK-JISYO.user",
-        })
-        vim.fn["skkeleton#enable"]()
-      end,
-    },
-  },
+		-- 日本語入力
+		{
+			"vim-skk/skkeleton",
+			dependencies = { "vim-denops/denops.vim" },
+			ft = { "markdown", "text", "gitcommit", "tex" },
+			config = function()
+				vim.fn["skkeleton#config"]({
+					globalDictionaries = { "~/.config/skk/SKK-JISYO.L" },
+					eggLikeNewline = true,
+					userJisyo = "~/.config/skk/SKK-JISYO.user",
+				})
+			end,
+		},
+	},
 
-  -- Performance optimizations
-  performance = {
-    rtp = {
-      disabled_plugins = {
-        "gzip",
-        "tarPlugin",
-        "tohtml",
-        "tutor",
-        "zipPlugin",
-        "netrwPlugin",
-        "matchit",
-      },
-    },
-  },
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"gzip", "tarPlugin", "tohtml", "tutor", "zipPlugin", "netrwPlugin", "matchit",
+			},
+		},
+	},
 })
 
--- =============================================================================
--- Color Scheme
--- =============================================================================
-if not vim.g.vscode then
-  vim.cmd('colorscheme darkblue')
-end
-
-
-
+-- このセクションはlazy.nvimで管理するため不要
+-- if not vim.g.vscode then
+-- 	vim.cmd('colorscheme darkblue')
+-- end

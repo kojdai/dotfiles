@@ -81,16 +81,13 @@ set showcmd
 set ttimeout
 
 " Set key code timeout length to 100ms for faster Esc response
-set ttimeoutlen=100
+set ttimeoutlen=50
 
 " Disable octal number interpretation for numbers starting with 0
 set nrformats-=octal
 
 " Briefly jump to matching bracket when inserting one
 set showmatch
-
-" Enable smart auto-indenting when starting a new line
-set smartindent
 
 " Automatically wrap lines at 80 characters
 set textwidth=80
@@ -110,6 +107,7 @@ syntax enable
 " Color Scheme
 autocmd ColorScheme * highlight Comment ctermfg=2 guifg=#008800
 colorscheme darkblue
+highlight Normal ctermbg=232
 
 
 " Enable filetype detection, plugins, and indentation
@@ -200,7 +198,8 @@ set listchars=tab:>-,trail:-,space:·
 set list
 
 " Highlight the line where the cursor is located
-set cursorline
+autocmd InsertEnter * set nocursorline
+autocmd InsertLeave * set cursorline
 
 " Set cursor line highlight color
 highlight CursorLine cterm=bold ctermfg=white ctermbg=DarkGray
