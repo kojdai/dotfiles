@@ -121,7 +121,7 @@ if ! shopt -oq posix; then
 fi
 
 # aliasを作成してコマンドが実行できるように
-alias nvim=~/.local/bin/nvim
+alias nvim=/mnt/c/Users/rsdlab/.local/bin/nvim
 
 export PATH="$PATH:/usr/local/gcc-arm-none-eabi-7-2018-q2-update/bin"
 export PATH="/mnt/c/Users/rsdlab/spresenseenv/usr/bin/:$PATH"

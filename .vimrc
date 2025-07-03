@@ -232,11 +232,11 @@ set softtabstop=2
 " Navigation Improvements
 "==================================================
 
-" Move down by display lines (wrap-aware)
-nnoremap j gj
+" Move down by display lines (wrap-aware) and show at center
+nnoremap j gjzz
 
 " Move up by display lines (wrap-aware)
-nnoremap k gk
+nnoremap k gkzz
 
 
 "==================================================
