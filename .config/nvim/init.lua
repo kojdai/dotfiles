@@ -41,7 +41,7 @@ vim.opt.whichwrap = 'b,s,<,>,[,],h,l' -- Allow certain keys to move across line 
 vim.opt.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 vim.opt.shiftwidth = 2 -- Number of spaces to use for each step of (auto)indent
 vim.opt.softtabstop = 2 -- Number of spaces a <Tab> counts for in editing
-vim.opt.expandtab = true -- Use spaces instead of tabs (recommended for consistency)
+vim.opt.expandtab = false -- Use spaces instead of tabs (recommended for consistency)
 vim.opt.swapfile = false -- Disable swap files
 vim.opt.backup = false -- Do not keep a backup file
 vim.opt.writebackup = false -- Do not create a backup during write
@@ -139,8 +139,16 @@ require('lazy').setup({
 		},
 
 		-- LSP / Auto-completion Plugins --
-		{ "williamboman/mason.nvim", cmd = "Mason" },
-		{ "williamboman/mason-lspconfig.nvim" },
+		{
+			"williamboman/mason.nvim",
+			config = function()
+				require("mason").setup()
+			end,
+		},
+		{
+			"williamboman/mason-lspconfig.nvim",
+			dependencies = { "williamboman/mason.nvim" },
+		},
 
 		{
 			'neovim/nvim-lspconfig',
@@ -166,8 +174,7 @@ require('lazy').setup({
 				end
 
 				local capabilities = require('cmp_nvim_lsp').default_capabilities()
-				-- 'ts_ls' を 'tsserver' に修正
-				local servers = { "lua_ls", "tsserver", "html", "cssls" }
+				local servers = { "lua_ls", "ts_ls", "html", "cssls" }
 
 				require('mason-lspconfig').setup({
 					ensure_installed = servers,
@@ -207,8 +214,8 @@ require('lazy').setup({
 						{ name = 'nvim_lsp' },
 						{ name = 'luasnip' },
 					}, {
-						{ name = 'buffer' },
-					}),
+							{ name = 'buffer' },
+						}),
 				})
 			end,
 		},
@@ -240,7 +247,3 @@ require('lazy').setup({
 	},
 })
 
--- このセクションはlazy.nvimで管理するため不要
--- if not vim.g.vscode then
--- 	vim.cmd('colorscheme darkblue')
--- end
