@@ -1,4 +1,3 @@
-#------------------------------------------------------------------
 # latexmk Configuration File
 #------------------------------------------------------------------
 
@@ -10,8 +9,8 @@ $pdf_engine = 'lualatex -synctex=1 -interaction=nonstopmode -file-line-error';
 #------------------------------------------------------------------
 # Output Directories
 #------------------------------------------------------------------
-$out_dir = '../out';
-$aux_dir = '../out';
+$out_dir = 'out';
+$aux_dir = 'out';
 
 #------------------------------------------------------------------
 # Automatic Cleanup
@@ -22,11 +21,13 @@ $do_cleanup = 1;
 # Set to 1 to clean up files when exiting PVC (continuous preview) mode.
 $pvc_do_cleanup = 1;
 
-# --- ADD THIS LINE ---
+# Allow cleanup in the output directory.
+$cleanup_includes_outdir = 1;
+
 # Explicitly list all auxiliary file extensions to be removed.
 # This ensures that files from packages like Beamer (.nav, .snm) are also deleted.
-$clean_ext = 'aux fdb_latexmk fls log nav out snm toc';
-# --- END OF ADDED LINE ---
+# Added more extensions to clean up most intermediate files.
+$clean_ext = 'aux bbl bcf blg fdb_latexmk fls log nav out run.xml snm synctex.gz toc vrb ';
 
 #------------------------------------------------------------------
 # Viewer Settings (Optional)
