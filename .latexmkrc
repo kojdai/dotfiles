@@ -10,9 +10,9 @@ $pdf_engine = 'lualatex -synctex=1 -interaction=nonstopmode -file-line-error';
 #------------------------------------------------------------------
 # Output Directories
 #------------------------------------------------------------------
-$out_dir = '../out';
-$aux_dir = '../out';
-
+$out_dir = 'out';
+$aux_dir = 'out';
+$latex = 'platex -synctex=1 -halt-on-error -interaction=nonstopmode';
 #------------------------------------------------------------------
 # Automatic Cleanup
 #------------------------------------------------------------------
