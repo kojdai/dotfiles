@@ -29,7 +29,6 @@ if has('persistent_undo')
 	set undodir=~/.vim/undodir
 endif
 
-
 "==================================================
 " Search Settings
 "==================================================
@@ -107,8 +106,6 @@ syntax enable
 " Color Scheme
 autocmd ColorScheme * highlight Comment ctermfg=2 guifg=#008800
 colorscheme darkblue
-highlight Normal ctermbg=232
-
 
 " Enable filetype detection, plugins, and indentation
 filetype plugin indent on
@@ -136,9 +133,6 @@ endif
 
 " Use 'jk' to exit insert mode
 imap jk <Esc>
-
-" Use full-width 'ｊｋ' to exit insert mode
-imap ｊｋ <Esc>
 
 " Use 'jk' to exit visual mode
 vmap jk <Esc>
