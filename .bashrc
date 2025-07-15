@@ -1,6 +1,8 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+#
+# =============================================================================
+# # Basic Configuration
+# =============================================================================
 
 # If not running interactively, don't do anything
 case $- in
@@ -8,110 +10,147 @@ case $- in
 	*) return;;
 esac
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
+# Set default editor
+export EDITOR=nvim
+export VISUAL=nvim
 
-# append to the history file, don't overwrite it
+# =============================================================================
+# # History Settings
+# =============================================================================
+
+# Don't put duplicate lines or lines starting with space in the history.
+# Erase duplicates across the entire history file.
+export HISTCONTROL=ignoreboth:erasedups
+
+# Set history size
+export HISTSIZE=10000
+export HISTFILESIZE=20000
+
+# Append to the history file, don't overwrite it
 shopt -s histappend
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTCONTROL=ignoreboth
-HISTSIZE=500000
-HISTFILESIZE=500000
+# Save history with timestamp
+export HISTTIMEFORMAT="%Y-%m-%d %T "
+
+# =============================================================================
+# # Shell Options
+# =============================================================================
+
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+# cd without typing 'cd'
+shopt -s autocd
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-	debian_chroot=$(cat /etc/debian_chroot)
-fi
+# =============================================================================
+# # Prompt Settings
+# =============================================================================
 
-# set a fancy prompt (non-color, unless we know we "want" color)
+# Set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
 	xterm-color|*-256color) color_prompt=yes;;
 esac
 
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-	if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-		# We have color support; assume it's compliant with Ecma-48
-		# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-		# a case would tend to support setf rather than setaf.)
-		color_prompt=yes
-	else
-		color_prompt=
-	fi
-fi
-
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-	xterm*|rxvt*)
-		PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-		;;
-	*)
-		;;
-esac
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-	alias ls='ls --color=auto'
-	#alias dir='dir --color=auto'
-	#alias vdir='vdir --color=auto'
-
-	alias grep='grep --color=auto'
-	alias fgrep='fgrep --color=auto'
-	alias egrep='egrep --color=auto'
-fi
-
+# Set the prompt
 if [ "$color_prompt" = yes ]; then
 	PS1='\[\033[01;32m\]\$\[\033[00m\] '
 else
 	PS1='\$ '
 fi
+unset color_prompt
 
+# =============================================================================
+# # Alias Settings
+# =============================================================================
 
+# Enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+	alias ls='ls --color=auto --group-directories-first'
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
+fi
 
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
+# Common ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+# Safety aliases
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# System update alias (run this manually when needed)
+alias update='sudo apt update && sudo apt upgrade -y'
+
+# WSL specific aliases
 alias open='explorer.exe'
 alias exp='explorer.exe .'
+alias pdf='explorer.exe *pdf'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+# Application specific aliases
+alias nvim='/mnt/c/Users/rsdlab/.local/bin/nvim'
 
+# Load custom aliases if file exists
 if [ -f ~/.bash_aliases ]; then
 	. ~/.bash_aliases
 fi
+# =============================================================================
+# # Environment Variables
+# =============================================================================
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# Add user's private bin directories to PATH
+[ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+[ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
+
+# Custom PATH entries
+PATH="/mnt/c/Users/rsdlab/spresenseenv/usr/bin/:$PATH"
+PATH="$PATH:/usr/local/gcc-arm-none-eabi-7-2018-q2-update/bin"
+
+# Deno
+export DENO_INSTALL="$HOME/.deno"
+PATH="$DENO_INSTALL/bin:$PATH"
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+
+export PATH
+
+# =============================================================================
+# # Keybindings
+# =============================================================================
+
+# History search backward/forward with Ctrl-P/Ctrl-N
+bind '"\C-p": history-search-backward'
+bind '"\C-n": history-search-forward'
+
+# Edit command line in $EDITOR with Ctrl-E
+bind '"\C-e": edit-and-execute-command'
+
+# =============================================================================
+# # Completions and Initializations
+# =============================================================================
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Bash Completion
 if ! shopt -oq posix; then
 	if [ -f /usr/share/bash-completion/bash_completion ]; then
 		. /usr/share/bash-completion/bash_completion
@@ -120,6 +159,7 @@ if ! shopt -oq posix; then
 	fi
 fi
 
+# NVM (Node Version Manager)
 # aliasを作成してコマンドが実行できるように
 alias nvim=/mnt/c/Users/kojda/.local/bin/nvim
 
@@ -134,9 +174,12 @@ bind '"\C-e": edit-and-execute-command'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 [ -s "$DENO_INSTALL/env" ] && . "$DENO_INSTALL/env"
 [ -f "$HOME/.local/share/bash-completion/completions/deno.bash" ] && source "$HOME/.local/share/bash-completion/completions/deno.bash"
 
-
+# Deno completion - NOTE: The original path seemed incorrect.
+# If you have deno completion installed, you may need to adjust the path below.
+# [ -s "$HOME/.deno/completion/deno.bash" ] && source "$HOME/.deno/completion/deno.bash"
