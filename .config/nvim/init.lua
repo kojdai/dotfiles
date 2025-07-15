@@ -16,6 +16,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Options
 -- =============================================================================
 vim.opt.number = true -- Show line numbers
+vim.opt.relativenumber = true -- Show line relativenumbers
 vim.opt.hlsearch = true -- Highlight search results
 vim.opt.incsearch = true -- Enable incremental search
 vim.opt.wrapscan = true -- Searches wrap around end of file
@@ -24,8 +25,9 @@ vim.opt.smartcase = true -- Override ignorecase if pattern has uppercase letters
 vim.opt.smartindent = true -- Enable smart auto-indenting
 vim.opt.backspace = 'indent,eol,start' -- Allow backspace over everything in insert mode
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
-vim.opt.history = 1000 -- Keep command history
+vim.opt.history = 10000 -- Keep command history
 vim.opt.ruler = true -- Show the cursor position
+vim.opt.cursorline = true 
 vim.opt.showcmd = true -- Show partial commands
 vim.opt.showmatch = true -- Briefly jump to matching bracket
 vim.opt.ttimeout = true -- Enable key code timeout
@@ -97,8 +99,9 @@ vim.keymap.set('n', 'N', 'Nzz', { noremap = true, silent = true })
 -- Clear search highlight
 vim.keymap.set('n', '<Leader>n', ':nohl<CR>', { noremap = true, silent = true })
 -- Wrap-aware movement
-vim.keymap.set('n', 'j', 'gj', { noremap = true, silent = true })
-vim.keymap.set('n', 'k', 'gk', { noremap = true, silent = true })
+vim.keymap.set('n', 'j', 'gjzz', { noremap = true, silent = true })
+vim.keymap.set('n', 'k', 'gkzz', { noremap = true, silent = true })
+vim.keymap.set('i', '<C-j>', '<Plug>(skkeleton-toggle)', { noremap = true, silent = true })
 
 -- =============================================================================
 -- Plugins
@@ -111,7 +114,6 @@ require('lazy').setup({
 			lazy = false,
 			priority = 1000,
 			config = function()
-				-- このif文は削除しました。カラースキームはlazy.nvimで管理するため
 				vim.cmd.colorscheme "darkblue"
 			end,
 		},
@@ -141,6 +143,7 @@ require('lazy').setup({
 		-- LSP / Auto-completion Plugins --
 		{
 			"williamboman/mason.nvim",
+			ft = { "lua", "javascript", "typescript", "html", "css", "yaml", "json", "latex" },
 			config = function()
 				require("mason").setup()
 			end,
@@ -148,6 +151,7 @@ require('lazy').setup({
 		{
 			"williamboman/mason-lspconfig.nvim",
 			dependencies = { "williamboman/mason.nvim" },
+			ft = { "lua", "javascript", "typescript", "html", "css", "yaml", "json", "latex" },
 		},
 
 		{
@@ -177,7 +181,7 @@ require('lazy').setup({
 				local servers = { "lua_ls", "ts_ls", "html", "cssls" }
 
 				require('mason-lspconfig').setup({
-					ensure_installed = servers,
+					-- ensure_installed = servers, -- 自動インストールを無効化
 				})
 
 				for _, server_name in ipairs(servers) do
@@ -223,7 +227,7 @@ require('lazy').setup({
 		{ 'L3MON4D3/LuaSnip', event = "InsertEnter", dependencies = { "rafamadriz/friendly-snippets" } },
 		{ 'saadparwaiz1/cmp_luasnip', event = "InsertEnter" },
 
-		-- 日本語入力
+		-- Japanese input
 		{
 			"vim-skk/skkeleton",
 			dependencies = { "vim-denops/denops.vim" },
@@ -232,7 +236,7 @@ require('lazy').setup({
 				vim.fn["skkeleton#config"]({
 					globalDictionaries = { "~/.config/skk/SKK-JISYO.L" },
 					eggLikeNewline = true,
-					userJisyo = "~/.config/skk/SKK-JISYO.user",
+					userDictionary = "~/.config/skk/SKK-JISYO.user",
 				})
 			end,
 		},
@@ -246,4 +250,3 @@ require('lazy').setup({
 		},
 	},
 })
-

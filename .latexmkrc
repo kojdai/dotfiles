@@ -11,6 +11,7 @@ $pdf_engine = 'lualatex -synctex=1 -interaction=nonstopmode -file-line-error';
 #------------------------------------------------------------------
 $out_dir = 'out';
 $aux_dir = 'out';
+$latex = 'platex -synctex=1 -halt-on-error -interaction=nonstopmode';
 
 #------------------------------------------------------------------
 # Automatic Cleanup
