@@ -88,9 +88,6 @@ set nrformats-=octal
 " Briefly jump to matching bracket when inserting one
 set showmatch
 
-" Automatically wrap lines at 80 characters
-set textwidth=80
-
 " Keep at least 10 lines visible above and below the cursor when scrolling
 set scrolloff=10
 
@@ -105,7 +102,7 @@ syntax enable
 
 " Color Scheme
 autocmd ColorScheme * highlight Comment ctermfg=2 guifg=#008800
-colorscheme darkblue
+colorscheme desert
 
 " Enable filetype detection, plugins, and indentation
 filetype plugin indent on
@@ -163,6 +160,12 @@ noremap <Leader>h ^
 
 " Move to the end of the line with <Leader>l
 noremap <Leader>l $
+
+" Move to the top of the document with <Leader>k
+noremap <Leader>k gg
+
+" Move to the end of the document with <Leader>j
+noremap <Leader>j G
 
 " Makes "Y" behave like "D" and "C": yanks (copies) from the cursor to the end of the line.
 nnoremap Y y$
@@ -256,3 +259,13 @@ set belloff=all
 
 " Set the terminal window title to the file name
 set title
+
+"==================================================
+" Filetype-specific settings
+"==================================================
+
+" Python (PEP 8) settings: Use 4 spaces for indentation
+augroup python_settings
+	autocmd!
+	autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+augroup END

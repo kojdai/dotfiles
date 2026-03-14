@@ -5,13 +5,13 @@
 # Engine and Compiler Options
 #------------------------------------------------------------------
 $pdf_engine = 'lualatex -synctex=1 -interaction=nonstopmode -file-line-error';
-
+$bibtex = 'upbibtex';
 #------------------------------------------------------------------
 # Output Directories
 #------------------------------------------------------------------
 $out_dir = 'out';
 $aux_dir = 'out';
-$latex = 'platex -synctex=1 -halt-on-error -interaction=nonstopmode';
+# $latex = 'platex -synctex=1 -halt-on-error -interaction=nonstopmode';
 
 #------------------------------------------------------------------
 # Automatic Cleanup

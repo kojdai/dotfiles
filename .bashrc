@@ -180,6 +180,8 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 [ -s "$DENO_INSTALL/env" ] && . "$DENO_INSTALL/env"
 [ -f "$HOME/.local/share/bash-completion/completions/deno.bash" ] && source "$HOME/.local/share/bash-completion/completions/deno.bash"
 
+export PATH="$HOME/.local/bin:$PATH"
+
 # Deno completion - NOTE: The original path seemed incorrect.
 # If you have deno completion installed, you may need to adjust the path below.
 # [ -s "$HOME/.deno/completion/deno.bash" ] && source "$HOME/.deno/completion/deno.bash"

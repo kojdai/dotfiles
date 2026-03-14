@@ -11,7 +11,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
-
 -- =============================================================================
 -- Options
 -- =============================================================================
@@ -27,7 +26,7 @@ vim.opt.backspace = 'indent,eol,start' -- Allow backspace over everything in ins
 vim.opt.clipboard = 'unnamedplus' -- Use system clipboard
 vim.opt.history = 10000 -- Keep command history
 vim.opt.ruler = true -- Show the cursor position
-vim.opt.cursorline = true 
+vim.opt.cursorline = true
 vim.opt.showcmd = true -- Show partial commands
 vim.opt.showmatch = true -- Briefly jump to matching bracket
 vim.opt.ttimeout = true -- Enable key code timeout
@@ -52,7 +51,6 @@ vim.opt.wildmenu = true -- Enable command-line completion menu
 vim.opt.wildmode = 'longest:full,list:full' -- Command-line completion mode
 vim.opt.belloff = 'all' -- Disable all beep sounds
 vim.opt.title = true -- Set the terminal window title
-
 vim.opt.list = true
 vim.opt.listchars = {
 	tab = '>-',
@@ -70,16 +68,13 @@ if vim.fn.has('persistent_undo') == 1 then
 	vim.opt.undofile = true
 	vim.opt.undodir = undodir
 end
-
 -- =============================================================================
 -- Keymaps
 -- =============================================================================
 vim.g.mapleader = ' ' -- Set leader key to Space
-
 -- Exit insert/visual mode
 vim.keymap.set({'i', 'v'}, 'jk', '<Esc>', { noremap = true, silent = true })
 vim.keymap.set({'i', 'v'}, 'ｊｋ', '<Esc>', { noremap = true, silent = true })
-
 -- Wrap word with delimiters
 vim.keymap.set('n', '\\(', 'i(<Esc>ea)<Esc>', { noremap = true, silent = true })
 vim.keymap.set('n', '\\{', 'i{<Esc>ea}<Esc>', { noremap = true, silent = true })
@@ -91,6 +86,8 @@ vim.keymap.set('n', '<Leader>a', 'ggVG', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader><Leader>h', '0', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>h', '^', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>l', '$', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>k', 'gg', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>j', 'G', { noremap = true, silent = true })
 -- Yank to end of line
 vim.keymap.set('n', 'Y', 'y$', { noremap = true, silent = true })
 -- Center screen on search
@@ -102,7 +99,6 @@ vim.keymap.set('n', '<Leader>n', ':nohl<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', 'j', 'gjzz', { noremap = true, silent = true })
 vim.keymap.set('n', 'k', 'gkzz', { noremap = true, silent = true })
 vim.keymap.set('i', '<C-j>', '<Plug>(skkeleton-toggle)', { noremap = true, silent = true })
-
 -- =============================================================================
 -- Plugins
 -- =============================================================================
@@ -114,10 +110,9 @@ require('lazy').setup({
 			lazy = false,
 			priority = 1000,
 			config = function()
-				vim.cmd.colorscheme "darkblue"
+				vim.cmd.colorscheme "desert"
 			end,
 		},
-
 		-- treesitter
 		{
 			'nvim-treesitter/nvim-treesitter',
@@ -133,13 +128,11 @@ require('lazy').setup({
 				})
 			end,
 		},
-
 		-- matchup
 		{
 			'andymass/vim-matchup',
 			event = 'VeryLazy',
 		},
-
 		-- LSP / Auto-completion Plugins --
 		{
 			"williamboman/mason.nvim",
@@ -153,7 +146,6 @@ require('lazy').setup({
 			dependencies = { "williamboman/mason.nvim" },
 			ft = { "lua", "javascript", "typescript", "html", "css", "yaml", "json", "latex" },
 		},
-
 		{
 			'neovim/nvim-lspconfig',
 			dependencies = { 'mason-lspconfig.nvim' },
@@ -163,7 +155,6 @@ require('lazy').setup({
 					virtual_text = true,
 					update_in_insert = false,
 				})
-
 				local on_attach = function(client, bufnr)
 					local buf_map = function(mode, lhs, rhs)
 						vim.keymap.set(mode, lhs, rhs, { noremap=true, silent=true, buffer=bufnr })
@@ -176,14 +167,11 @@ require('lazy').setup({
 					buf_map('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>')
 					buf_map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
 				end
-
 				local capabilities = require('cmp_nvim_lsp').default_capabilities()
 				local servers = { "lua_ls", "ts_ls", "html", "cssls" }
-
 				require('mason-lspconfig').setup({
 					-- ensure_installed = servers, -- 自動インストールを無効化
 				})
-
 				for _, server_name in ipairs(servers) do
 					require('lspconfig')[server_name].setup({
 						on_attach = on_attach,
@@ -192,7 +180,6 @@ require('lazy').setup({
 				end
 			end,
 		},
-
 		-- Completion engine
 		{
 			'hrsh7th/nvim-cmp',
@@ -218,15 +205,14 @@ require('lazy').setup({
 						{ name = 'nvim_lsp' },
 						{ name = 'luasnip' },
 					}, {
-							{ name = 'buffer' },
-						}),
+						{ name = 'buffer' },
+					}),
 				})
 			end,
 		},
 		{ 'hrsh7th/cmp-nvim-lsp', event = "InsertEnter" },
 		{ 'L3MON4D3/LuaSnip', event = "InsertEnter", dependencies = { "rafamadriz/friendly-snippets" } },
 		{ 'saadparwaiz1/cmp_luasnip', event = "InsertEnter" },
-
 		-- Japanese input
 		{
 			"vim-skk/skkeleton",
@@ -241,7 +227,6 @@ require('lazy').setup({
 			end,
 		},
 	},
-
 	performance = {
 		rtp = {
 			disabled_plugins = {
