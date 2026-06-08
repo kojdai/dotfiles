@@ -11,8 +11,8 @@ case $- in
 esac
 
 # Set default editor
-export EDITOR=nvim
-export VISUAL=nvim
+export EDITOR=vim
+export VISUAL=vim
 
 # =============================================================================
 # # History Settings
@@ -106,6 +106,18 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Application specific aliases
 alias nvim='/mnt/c/Users/rsdlab/.local/bin/nvim'
+alias vf='vim $(ls | fzf)'
+
+# fzf: open file in vim, or cd into directory
+ff() {
+  local sel
+  sel=$(ls | fzf) || return
+  if [ -d "$sel" ]; then
+    cd "$sel"
+  elif [ -f "$sel" ]; then
+    vim "$sel"
+  fi
+}
 
 # Load custom aliases if file exists
 if [ -f ~/.bash_aliases ]; then
@@ -181,7 +193,8 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 [ -f "$HOME/.local/share/bash-completion/completions/deno.bash" ] && source "$HOME/.local/share/bash-completion/completions/deno.bash"
 
 export PATH="$HOME/.local/bin:$PATH"
-
+export FZF_DEFAULT_OPTS='--bind=j:down,k:up'
+set -o vi
 # Deno completion - NOTE: The original path seemed incorrect.
 # If you have deno completion installed, you may need to adjust the path below.
 # [ -s "$HOME/.deno/completion/deno.bash" ] && source "$HOME/.deno/completion/deno.bash"

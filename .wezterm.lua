@@ -1,0 +1,1 @@
+/mnt/c/Users/kojda/.wezterm.lua

@@ -269,3 +269,7 @@ augroup python_settings
 	autocmd!
 	autocmd FileType python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 augroup END
+
+" ペースト時に自動でWindowsの改行コード(^M)を削除する
+nnoremap p p:keeppatterns '[,']s/\r//ge<CR>
+nnoremap P P:keeppatterns '[,']s/\r//ge<CR>
