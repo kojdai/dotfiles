@@ -1,0 +1,106 @@
+-- =============================================================================
+-- Neovim config for zk (Zettelkasten) notes
+-- 既存の ~/.vimrc を読み込みつつ、zk 用の LSP / リンク挿入を追加する。
+-- 通常の編集は vim、zk ノートは nvim という使い分け。
+-- =============================================================================
+
+-- 慣れた vim 設定（jk でEsc, Spaceリーダー等）をそのまま流用
+vim.cmd("silent! source ~/.vimrc")
+
+-- マークダウンを読みやすく
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.conceallevel = 2 -- [[a|b]] のラベル表示などを綺麗に
+
+-- =============================================================================
+-- zk LSP（zk 自身が language server。`zk lsp` で起動）
+--   * `[[` で既存ノートをタイトル補完して挿入（Obsidian風）
+--   * デッドリンク等の診断、K でホバー、gd で定義ジャンプ
+-- =============================================================================
+vim.lsp.config("zk", {
+	cmd = { "zk", "lsp" },
+	filetypes = { "markdown" },
+	root_markers = { ".zk" }, -- ノートブックのルート（~/zkNote/.zk）を自動検出
+})
+vim.lsp.enable("zk")
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client and client:supports_method("textDocument/completion") then
+			-- `[[` などのトリガで自動補完ポップアップ
+			vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+		end
+		local opts = { buffer = args.buf }
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- リンク先へジャンプ
+		vim.keymap.set("n", "<leader>zb", vim.lsp.buf.references, opts) -- バックリンク一覧
+	end,
+})
+
+-- 補完ポップアップ中は Tab/S-Tab で選択、Enter で確定
+vim.keymap.set("i", "<Tab>", function()
+	return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
+end, { expr = true })
+vim.keymap.set("i", "<S-Tab>", function()
+	return vim.fn.pumvisible() == 1 and "<C-p>" or "<S-Tab>"
+end, { expr = true })
+
+-- =============================================================================
+-- <leader>zl : fzf でノートをキーワード検索して [[stem|title]] を挿入
+--   LSP の `[[` 補完が「今いるノートブックの全ノートをインクリメンタル検索」なら、
+--   こちらは「タイトル/本文をfzfで曖昧検索してから挿入」する Notion/Obsidian 風の導線。
+--   bat でプレビューしながら選べる。
+-- =============================================================================
+local function zk_insert_link()
+	local nb = vim.env.ZK_NOTEBOOK_DIR or (vim.env.HOME .. "/zkNote")
+	local tmp = vim.fn.tempname()
+	local sh = string.format(
+		[[cd %q && zk list --quiet --no-pager --format $'{{title}}\t{{filename-stem}}\t{{abs-path}}' ]]
+			.. [[| fzf --delimiter='\t' --with-nth=1 --prompt='link> ' ]]
+			.. [[--preview 'bat --color=always --style=plain --line-range :200 {3}' ]]
+			.. [[--preview-window=right:60%% > %q]],
+		nb,
+		tmp
+	)
+
+	local buf = vim.api.nvim_create_buf(false, true)
+	local width = math.floor(vim.o.columns * 0.9)
+	local height = math.floor(vim.o.lines * 0.85)
+	local win = vim.api.nvim_open_win(buf, true, {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = math.floor((vim.o.lines - height) / 2),
+		col = math.floor((vim.o.columns - width) / 2),
+		style = "minimal",
+		border = "rounded",
+	})
+
+	vim.fn.jobstart({ "bash", "-c", sh }, {
+		term = true,
+		on_exit = function()
+			if vim.api.nvim_win_is_valid(win) then
+				vim.api.nvim_win_close(win, true)
+			end
+			local lines = vim.fn.readfile(tmp)
+			vim.fn.delete(tmp)
+			if #lines == 0 or lines[1] == "" then
+				return
+			end
+			local title, stem = lines[1]:match("^(.-)\t(.-)\t")
+			if not stem or stem == "" then
+				return
+			end
+			vim.api.nvim_put({ string.format("[[%s|%s]]", stem, title) }, "c", true, true)
+		end,
+	})
+	vim.cmd("startinsert")
+end
+
+vim.api.nvim_create_user_command("ZkLink", zk_insert_link, {})
+vim.keymap.set("n", "<leader>zl", zk_insert_link, { desc = "zk: insert link" })
+vim.keymap.set("i", "<C-l>", function()
+	vim.cmd("stopinsert")
+	zk_insert_link()
+end, { desc = "zk: insert link" })

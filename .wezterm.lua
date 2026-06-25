@@ -11,6 +11,8 @@ local config = wezterm.config_builder()
 config.default_prog = { 'wsl.exe', '--cd', '~', '-d', 'Ubuntu-24.04' }
 
 config.automatically_reload_config = true
+-- スクロールバック行数（既定 3500 だと Claude Code の長いログを遡りきれないため拡張）
+config.scrollback_lines = 100000
 config.font_size = 12.0
 config.use_ime = true
 config.window_background_opacity = 0.95
@@ -110,7 +112,96 @@ config.keys = {
 	{ key = 'l', mods = 'LEADER', action = wezterm.action.ActivatePaneDirection('Right') },
 	{ key = 'k', mods = 'LEADER', action = wezterm.action.ActivatePaneDirection('Up') },
 	{ key = 'j', mods = 'LEADER', action = wezterm.action.ActivatePaneDirection('Down') },
+
+	-- ==================== ワークスペース ====================
+	-- 登録済みワークスペースをあいまい検索で一覧表示して切り替え（＝「呼び出す」）
+	-- 操作: Ctrl+e を押して離した後、w
+	{ key = 'w', mods = 'LEADER', action = wezterm.action.ShowLauncherArgs { flags = 'FUZZY|WORKSPACES' } },
+
+	-- 用途ごとのワークスペースへ一発切り替え（無ければ自動作成＝「登録」）
+	-- 操作: Ctrl+e → p （論文執筆: ~/zkNote で起動）
+	{ key = 'p', mods = 'LEADER', action = wezterm.action.SwitchToWorkspace {
+		name = 'paper',
+		spawn = { args = { 'wsl.exe', '--cd', '/home/dkojima/zkNote', '-d', 'Ubuntu-24.04' } },
+	}},
+
+	-- 操作: Ctrl+e → a （アプリ開発: ~ で起動。必要に応じてパスを変更）
+	{ key = 'a', mods = 'LEADER', action = wezterm.action.SwitchToWorkspace {
+		name = 'dev',
+		spawn = { args = { 'wsl.exe', '--cd', '/home/dkojima', '-d', 'Ubuntu-24.04' } },
+	}},
+
+	-- 名前を入力してその場で新しいワークスペースを作成
+	-- 操作: Ctrl+e → W (Shift+w)
+	{ key = 'W', mods = 'LEADER', action = wezterm.action.PromptInputLine {
+		description = wezterm.format {
+			{ Attribute = { Intensity = 'Bold' } },
+			{ Foreground = { Color = '#ae8b2d' } },
+			{ Text = '新しいワークスペース名:' },
+		},
+		action = wezterm.action_callback(function(window, pane, line)
+			if line and line ~= '' then
+				window:perform_action(
+					wezterm.action.SwitchToWorkspace { name = line },
+					pane
+				)
+			end
+		end),
+	}},
+
+	-- 前 / 次のワークスペースへ巡回
+	-- 操作: Ctrl+e → [ または ]
+	{ key = '[', mods = 'LEADER', action = wezterm.action.SwitchWorkspaceRelative(-1) },
+	{ key = ']', mods = 'LEADER', action = wezterm.action.SwitchWorkspaceRelative(1) },
+
+	-- ペインのサイズ調整モードへ入る（C-e r → 以降 h/j/k/l 連打で境界を移動 / Esc で終了）
+	{ key = 'r', mods = 'LEADER', action = wezterm.action.ActivateKeyTable {
+		name = 'resize_pane',
+		one_shot = false,   -- モードを維持して連打を効かせる
+	}},
 }
+
+-- ============================================================================
+-- 4.1 キーテーブル（モード）: ペインのサイズ調整
+-- ============================================================================
+config.key_tables = {
+	resize_pane = {
+		-- h/j/k/l 連打で境界を少しずつ移動（1回あたり 3 セル）
+		{ key = 'h', action = wezterm.action.AdjustPaneSize { 'Left', 3 } },
+		{ key = 'l', action = wezterm.action.AdjustPaneSize { 'Right', 3 } },
+		{ key = 'j', action = wezterm.action.AdjustPaneSize { 'Down', 3 } },
+		{ key = 'k', action = wezterm.action.AdjustPaneSize { 'Up', 3 } },
+		-- モード終了
+		{ key = 'Escape', action = 'PopKeyTable' },
+		{ key = 'Enter', action = 'PopKeyTable' },
+	},
+}
+
+-- ============================================================================
+-- 4.5 起動時のデフォルトレイアウト（左=通常CLI / 右=Claude）
+-- ============================================================================
+local mux = wezterm.mux
+
+wezterm.on('gui-startup', function(cmd)
+	-- 左ペイン（通常の WSL シェル）
+	local tab, left_pane, window = mux.spawn_window {
+		args = { 'wsl.exe', '--cd', '/home/dkojima', '-d', 'Ubuntu-24.04' },
+	}
+
+	-- 右ペインを 50% で分割し、そこで Claude を起動
+	local right_pane = left_pane:split {
+		direction = 'Right',
+		size = 0.5,
+		args = { 'wsl.exe', '--cd', '/home/dkojima', '-d', 'Ubuntu-24.04' },
+	}
+	-- claude を終了しても通常シェルが残るよう send_text で打ち込む方式にする
+	right_pane:send_text 'claude\n'
+
+	-- フォーカスは左の通常CLIに戻す
+	left_pane:activate()
+
+	window:gui_window():maximize()
+end)
 
 -- ============================================================================
 -- 5. WezTermのステータスバー（右下）にモードを表示する
@@ -129,8 +220,11 @@ wezterm.on("update-right-status", function(window, pane)
 		status = status .. " " .. key_table .. " "
 	end
 	
-	-- 右下に目立つ色（黄色背景に黒文字）で表示
+	-- 現在のワークスペース名（左側に控えめな色で）＋モード表示（右側に目立つ色で）
 	window:set_right_status(wezterm.format({
+		{ Background = { Color = "#5c6d74" } },
+		{ Foreground = { Color = "#FFFFFF" } },
+		{ Text = "  " .. window:active_workspace() .. "  " },
 		{ Background = { Color = "#ae8b2d" } },
 		{ Foreground = { Color = "#000000" } },
 		{ Text = status },

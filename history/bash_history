@@ -1,0 +1,5668 @@
+l
+update
+ll
+l
+cd
+ll
+git clone git@github.com:kojdai/dotfiles.git
+l
+ll
+git clone git@github.com:kojdai/dotfiles.git
+#1773551370
+cd
+#1773551370
+git clone git@github.com:kojdai/dotfiles.git
+#1773551370
+git clone git@github.com:kojdai/dotfiles.git
+#1773551413
+git@github.com:kojdai/dotfiles.git
+#1773551418
+git clone git@github.com:kojdai/dotfiles.git
+#1773551571
+ping -c 4 google.com
+#1773551582
+git clone git@github.com:kojdai/dotfiles.git
+#1773551637
+ls -al ~/.ssh
+#1773551664
+ssh-keygen -t ed25519 -C "kojdai00@gmail.com"
+#1773551674
+cd .ssh
+#1773551693
+cat id_ed25519.pub 
+#1773551770
+git clone git@github.com:kojdai/dotfiles.git
+#1773551784
+cd
+#1773551790
+git clone git@github.com:kojdai/dotfiles.git
+#1773551801
+cd dotfiles/
+#1773551805
+..
+#1773551819
+ssh -T git@github.com
+#1773551853
+ln -s .bashrc /home/dkojima/dotfiles/.bashrc
+#1773551887
+ln -s dotfiles/.bashrc .bashrc
+#1773551894
+rm .bashrc
+#1773551897
+ln -s dotfiles/.bashrc .bashrc
+#1773551913
+source .bashrc
+#1773551936
+rm .bashrc
+#1773551937
+..
+#1773551943
+..
+#1773551944
+cd ..
+#1773551950
+rm -rf dotfiles/
+#1773551969
+git clone git@github.com:kojdai/dotfiles.git
+#1773551999
+ln -s dotfiles/.bashrc .bashrc
+#1773552004
+rm .bashrc
+#1773552006
+ln -s dotfiles/.bashrc .bashrc
+#1773552009
+source .bashrc
+#1773552024
+ln -s dotfiles/.vimrc .vimrc
+#1773552044
+ll
+#1773552056
+update
+#1773552541
+sudo apt install texlive texlive-lang-japanese texlive-latex-extra texlive-fonts-recommended
+#1773553260
+ln -s dotfiles/.latexmkrc .latexmkrc
+#1773553327
+git clone git@github.com:kojdai/docs.git
+#1773553350
+cd docs
+#1773553354
+cd 2511_Tgroup_Report/
+#1773555327
+sudo apt install latexmk
+#1773555613
+latexmk slide.tex 
+#1773555624
+vim ~/.latexmkrc
+#1773555652
+rm -rf out
+#1773555698
+sudo apt install texlive-luatex
+#1773555849
+latexmk report.tex 
+#1773555916
+out
+#1773555916
+pdf
+#1773555918
+l
+#1773555922
+open report.pdf
+#1773555935
+vim ~/.bashrc
+#1773555999
+cat ~/.bashrc
+#1773556041
+wsl --shutdown
+#1773552702
+ll
+#1773552702
+git clone git@github.com:kojdai/dotfiles.git
+#1773555482
+cd /mnt/c/Users/kojda/AppData/
+#1773555486
+cd ..
+#1773555487
+l
+#1773555482
+cd /mnt/c/Users/kojda/AppData/
+#1773555486
+cd ..
+#1773556117
+cd docs
+#1773556121
+cd 2511_Tgroup_Report/
+#1773556122
+out
+#1773556122
+pdf
+#1773556137
+..
+#1773556138
+code .
+#1773557426
+update
+#1773557438
+l
+#1773552702
+git clone git@github.com:kojdai/dotfiles.git
+#1773555482
+cd /mnt/c/Users/kojda/AppData/
+#1773555486
+cd ..
+#1773555482
+cd /mnt/c/Users/kojda/AppData/
+#1773555486
+cd ..
+#1773556117
+cd docs
+#1773556121
+cd 2511_Tgroup_Report/
+#1773556138
+code .
+#1773557426
+update
+#1773638733
+cd /mnt/c/Users/kojda/Desktop/
+#1773638736
+ll
+#1773638744
+cd OneDrive/Desktop/
+#1773638890
+latexmk 2026\ 春期日本教育工学会.tex 
+#1773638913
+out
+#1773638913
+pdf
+#1773638935
+..
+#1773638937
+vim 2026\ 春期日本教育工学会.tex 
+#1773639171
+rm -rf out
+#1773639172
+rm 2026\ 春期日本教育工学会.tex 
+#1773639174
+l
+#1773639177
+exit
+#1773555486
+cd ..
+#1773556138
+code .
+#1773557426
+update
+#1773638733
+cd /mnt/c/Users/kojda/Desktop/
+#1773638736
+ll
+#1773638744
+cd OneDrive/Desktop/
+#1773638890
+latexmk 2026\ 春期日本教育工学会.tex 
+#1773638937
+vim 2026\ 春期日本教育工学会.tex 
+#1773639171
+rm -rf out
+#1773639172
+rm 2026\ 春期日本教育工学会.tex 
+#1773639177
+exit
+#1773711093
+cd docs
+#1773711104
+cd 25_summer_research/
+#1773711130
+cd 2511_Tgroup_Report/
+#1773711131
+ouy
+#1773711133
+out
+#1773711134
+pdf
+#1773794903
+...
+#1773794906
+..
+#1773794906
+l
+#1773794923
+mv docs /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773794923
+mv docs /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773796292
+cd /mnt/d/Surface\ book3/meijo/
+#1773796293
+l
+#1773796308
+git clone git@github.com:kojdai/Graduate_research.git 
+#1773555486
+cd ..
+#1773555482
+cd /mnt/c/Users/kojda/AppData/
+#1773555486
+cd ..
+#1773556121
+cd 2511_Tgroup_Report/
+#1773556138
+code .
+#1773638733
+cd /mnt/c/Users/kojda/Desktop/
+#1773638736
+ll
+#1773638744
+cd OneDrive/Desktop/
+#1773638890
+latexmk 2026\ 春期日本教育工学会.tex 
+#1773638913
+out
+#1773638913
+pdf
+#1773638937
+vim 2026\ 春期日本教育工学会.tex 
+#1773639171
+rm -rf out
+#1773639172
+rm 2026\ 春期日本教育工学会.tex 
+#1773639177
+exit
+#1773555486
+cd ..
+#1773556138
+code .
+#1773638733
+cd /mnt/c/Users/kojda/Desktop/
+#1773638736
+ll
+#1773638744
+cd OneDrive/Desktop/
+#1773638890
+latexmk 2026\ 春期日本教育工学会.tex 
+#1773638937
+vim 2026\ 春期日本教育工学会.tex 
+#1773639171
+rm -rf out
+#1773639172
+rm 2026\ 春期日本教育工学会.tex 
+#1773639177
+exit
+#1773711104
+cd 25_summer_research/
+#1773711130
+cd 2511_Tgroup_Report/
+#1773711131
+ouy
+#1773711133
+out
+#1773711134
+pdf
+#1773794903
+...
+#1773794923
+mv docs /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773794923
+mv docs /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773796292
+cd /mnt/d/Surface\ book3/meijo/
+#1773796308
+git clone git@github.com:kojdai/Graduate_research.git 
+#1773796901
+cd /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773796923
+git clone git@github.com:kojdai/docs.git
+#1773796957
+mv docs docs_
+#1773796962
+mv docs_/ ..
+#1773796976
+mv * ../docs_/
+#1773796991
+rm -rf docs
+#1773796999
+mv docs_ docs
+#1773797003
+cd docs
+#1773797631
+git rm --cached "250517-_suzuki(2016)"
+#1773797631
+git rm --cached hiyoko_of_laboratory
+#1773797667
+git rm -f --cached "250517-_suzuki(2016)"
+#1773797667
+git rm -f --cached hiyoko_of_laboratory
+#1773797672
+for d in "250517-_suzuki(2016)" hiyoko_of_laboratory; do echo "--- $d ---"; git -C "$d" remote -v; done
+#1773797708
+git submodule add git@github.com:Great1412/hiyoko_of_laboratory.git hiyoko_of_laboratory
+#1773797732
+rm -rf "250517-_suzuki(2016)"/
+#1773797739
+cd suzuki-2016-_tex/
+#1773797743
+git pul
+#1773797752
+..
+#1773797791
+rm -rf suzuki-2016-_tex/
+#1773797807
+git clone git@github.com:kojdai/suzuki-2016-_tex.git
+#1773797900
+git config user.email "kojdai00@gmail.com"
+#1773797905
+git config user.name "kojdai"
+#1773797911
+l
+#1773797922
+git commit -m "Add hiyoko_of_laboratory submodule and integrate suzuki docs"
+#1773798126
+git update-ref -d HEAD
+#1773798131
+git rm --cached "Cheet_Sheet/blender　解説.pdf"
+#1773798134
+echo "Cheet_Sheet/blender　解説.pdf" >> .gitignore
+#1773798138
+git add .
+#1773798159
+git pull
+#1773798164
+git push
+#1773798169
+git commit -m "Initial commit with submodules"
+#1773798179
+git push -u origin main
+#1773798183
+git branch
+#1773798236
+git push -f origin main
+#1773798285
+update
+#1773711131
+ouy
+#1773794923
+mv docs /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773794923
+mv docs /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773796292
+cd /mnt/d/Surface\ book3/meijo/
+#1773796308
+git clone git@github.com:kojdai/Graduate_research.git 
+#1773555486
+cd ..
+#1773555482
+cd /mnt/c/Users/kojda/AppData/
+#1773555486
+cd ..
+#1773556138
+code .
+#1773638733
+cd /mnt/c/Users/kojda/Desktop/
+#1773638744
+cd OneDrive/Desktop/
+#1773638890
+latexmk 2026\ 春期日本教育工学会.tex 
+#1773638937
+vim 2026\ 春期日本教育工学会.tex 
+#1773639171
+rm -rf out
+#1773639172
+rm 2026\ 春期日本教育工学会.tex 
+#1773639177
+exit
+#1773555486
+cd ..
+#1773556138
+code .
+#1773638733
+cd /mnt/c/Users/kojda/Desktop/
+#1773638744
+cd OneDrive/Desktop/
+#1773638890
+latexmk 2026\ 春期日本教育工学会.tex 
+#1773638937
+vim 2026\ 春期日本教育工学会.tex 
+#1773639171
+rm -rf out
+#1773639172
+rm 2026\ 春期日本教育工学会.tex 
+#1773639177
+exit
+#1773711131
+ouy
+#1773794923
+mv docs /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773794923
+mv docs /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773796292
+cd /mnt/d/Surface\ book3/meijo/
+#1773796308
+git clone git@github.com:kojdai/Graduate_research.git 
+#1773796901
+cd /mnt/c/Users/kojda/OneDrive/Desktop/
+#1773796923
+git clone git@github.com:kojdai/docs.git
+#1773796957
+mv docs docs_
+#1773796962
+mv docs_/ ..
+#1773796976
+mv * ../docs_/
+#1773796991
+rm -rf docs
+#1773796999
+mv docs_ docs
+#1773797631
+git rm --cached "250517-_suzuki(2016)"
+#1773797631
+git rm --cached hiyoko_of_laboratory
+#1773797667
+git rm -f --cached "250517-_suzuki(2016)"
+#1773797667
+git rm -f --cached hiyoko_of_laboratory
+#1773797672
+for d in "250517-_suzuki(2016)" hiyoko_of_laboratory; do echo "--- $d ---"; git -C "$d" remote -v; done
+#1773797708
+git submodule add git@github.com:Great1412/hiyoko_of_laboratory.git hiyoko_of_laboratory
+#1773797732
+rm -rf "250517-_suzuki(2016)"/
+#1773797739
+cd suzuki-2016-_tex/
+#1773797743
+git pul
+#1773797791
+rm -rf suzuki-2016-_tex/
+#1773797807
+git clone git@github.com:kojdai/suzuki-2016-_tex.git
+#1773797900
+git config user.email "kojdai00@gmail.com"
+#1773797905
+git config user.name "kojdai"
+#1773797922
+git commit -m "Add hiyoko_of_laboratory submodule and integrate suzuki docs"
+#1773798126
+git update-ref -d HEAD
+#1773798131
+git rm --cached "Cheet_Sheet/blender　解説.pdf"
+#1773798134
+echo "Cheet_Sheet/blender　解説.pdf" >> .gitignore
+#1773798138
+git add .
+#1773798159
+git pull
+#1773798164
+git push
+#1773798169
+git commit -m "Initial commit with submodules"
+#1773798179
+git push -u origin main
+#1773798183
+git branch
+#1773798236
+git push -f origin main
+#1773798285
+update
+#1773798988
+ln -s /mnt/c/Users/kojda/OneDrive/Desktop/docs docs
+#1773798998
+ln -s /mnt/c/Users/kojda/OneDrive/Desktop/mitemo mitemo
+#1773799000
+cd mitemo
+#1773799004
+cd J_事後報告書/
+#1773799051
+cd /mnt/c/Users/kojda/AppData/Local/Temp
+#1773799070
+pwd
+#1773799074
+rm -rf *
+#1773801534
+cd 26_JSET_spring/
+#1773801536
+vim 26_JSET_spring.tex 
+#1773899674
+cd 25_summer_research/
+#1773900143
+...
+#1773904150
+cd
+#1774176834
+cd docs
+#1774176837
+cd 2511_Tgroup_Report/
+#1774176841
+vim report.tex 
+#1774179217
+mkdir 26_mypro
+#1774179428
+sudo apt install vim-gnome
+#1774179435
+sudo apt install vim-gtk3
+#1774179449
+vim --version | grep clipboard
+#1774179449
+# -> -clipboard
+#1774180564
+ll
+#1774180580
+mv 26_mypro.tex 26_mypro
+#1774180586
+cd 26_mypro/
+#1774181260
+..
+#1774181261
+l
+#1774181261
+vim 26_mypro.tex
+#1774181271
+latexmk 26_mypro.tex 
+#1774181314
+out
+#1774181315
+pdf
+#1773900143
+...
+#1773904150
+cd
+#1774176837
+cd 2511_Tgroup_Report/
+#1774176841
+vim report.tex 
+#1774179217
+mkdir 26_mypro
+#1774179428
+sudo apt install vim-gnome
+#1774179435
+sudo apt install vim-gtk3
+#1774179449
+vim --version | grep clipboard
+#1774179449
+# -> -clipboard
+#1774180564
+ll
+#1774180580
+mv 26_mypro.tex 26_mypro
+#1774181261
+vim 26_mypro.tex
+#1774237456
+cd docs
+#1774237464
+vim 26_mypro.tex 
+#1774237524
+latexmk 26_mypro.tex 
+#1774237550
+out
+#1774237551
+pdf
+#1774237798
+..
+#1774237803
+git add .
+#1774237821
+git commit -m "added mypro"
+#1774237830
+git push
+#1774269918
+cd 26_mypro/
+#1774269918
+l
+#1774269920
+code .
+#1774270059
+wsl --shutdown
+#1774270408
+nvim --version
+#1774176837
+cd 2511_Tgroup_Report/
+#1774176841
+vim report.tex 
+#1774179217
+mkdir 26_mypro
+#1774179428
+sudo apt install vim-gnome
+#1774179435
+sudo apt install vim-gtk3
+#1774179449
+vim --version | grep clipboard
+#1774179449
+# -> -clipboard
+#1774180564
+ll
+#1774180580
+mv 26_mypro.tex 26_mypro
+#1774181261
+vim 26_mypro.tex
+#1774237803
+git add .
+#1774237821
+git commit -m "added mypro"
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270105
+cd docs
+#1774270107
+cd 26_mypro/
+#1774270110
+coee .
+#1774270731
+whitch nvim
+#1774270742
+which nvim
+#1774270744
+nvim
+#1774270751
+where nvim
+#1774271230
+rm -rf ~/.vscode-server
+#1774271240
+cat /etc/wsl.conf
+#1774271303
+sudo sh -c 'echo :WSLInterop:M::MZ::/init:PF > /usr/lib/binfmt.d/WSLInterop.conf'
+#1774271309
+sudo systemctl restart systemd-binfmt
+#1774271313
+code .
+#1774278705
+out
+#1774278706
+pdf
+#1774278728
+..
+#1774278730
+vim 26_mypro.tex 
+#1774278760
+latexmk 26_mypro.tex 
+#1774316419
+l
+#1774237830
+git push
+#1774269918
+cd 26_mypro/
+#1774269920
+code .
+#1774270059
+wsl --shutdown
+#1774270787
+cd
+#1774270808
+ln -s dotfiles/.config .config
+#1774270811
+ll
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774270986
+nvim
+#1774271030
+l
+#1774176841
+vim report.tex 
+#1774179217
+mkdir 26_mypro
+#1774179428
+sudo apt install vim-gnome
+#1774179435
+sudo apt install vim-gtk3
+#1774179449
+vim --version | grep clipboard
+#1774179449
+# -> -clipboard
+#1774180564
+ll
+#1774180580
+mv 26_mypro.tex 26_mypro
+#1774181261
+vim 26_mypro.tex
+#1774237803
+git add .
+#1774237821
+git commit -m "added mypro"
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270110
+coee .
+#1774270731
+whitch nvim
+#1774270742
+which nvim
+#1774270751
+where nvim
+#1774271240
+cat /etc/wsl.conf
+#1774271303
+sudo sh -c 'echo :WSLInterop:M::MZ::/init:PF > /usr/lib/binfmt.d/WSLInterop.conf'
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270808
+ln -s dotfiles/.config .config
+#1774270811
+ll
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774316681
+update
+#1774317054
+mv ~/.config/nvim ~/.config/nvim_backup
+#1774317346
+cd
+#1774317347
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+#1774317355
+sudo rm -rf /opt/nvim
+#1774317355
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+#1774317427
+rm nvim-linux64.tar.gz
+#1774317429
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+#1774317443
+sudo rm -rf /opt/nvim-linux-x86_64
+#1774317443
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+#1774317450
+sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
+#1774317455
+nvim --version
+#1774317518
+mv ~/.config/nvim_backup/ ~/.config/nvim
+#1774317584
+cd docs
+#1774317586
+cd 26_mypro/
+#1774318450
+sudo mkdir -p /etc/binfmt.d
+#1774318459
+sudo sh -c 'echo ":WSLInterop:M::MZ::/init:PF" > /etc/binfmt.d/WSLInterop.conf'
+#1774318460
+sudo systemctl restart systemd-binfmt
+#1774318685
+rm -rf ~/.vscode-server
+#1774320103
+nvim
+#1774320443
+sudo sh -c 'echo ":WSLInterop:M::MZ::/init:PF" > /usr/lib/binfmt.d/WSLInterop.conf'
+#1774320448
+sudo systemctl unmask systemd-binfmt.service
+#1774320452
+sudo systemctl enable systemd-binfmt.service
+#1774320456
+sudo systemctl restart systemd-binfmt.service
+#1774320467
+code .
+#1774324070
+vim 26_mypro.tex 
+#1774324146
+latexmk 26_mypro.tex 
+#1774324174
+out
+#1774324183
+pdf
+#1774324186
+open *pdf
+#1774324188
+..
+#1774324192
+vim ~/.bashrc
+#1774324206
+l
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774270986
+nvim
+#1774322796
+cd
+#1774322805
+cd .config
+#1774322807
+cd nvim
+#1774322807
+l
+#1774322808
+pwd
+#1774323424
+mv ~/.config/nvim ~/.config/nvim_temp
+#1774323698
+[200~sudo apt update
+#1774323698
+sudo apt install -y libncurses5 libxcb-shape0 libxcb-render0~
+#1774323705
+sudo apt update
+#1774323711
+sudo apt install -y libncurses5 libxcb-shape0 libxcb-render0
+#1774323722
+/opt/nvim-linux-x86_64/bin/nvim --embed --clean
+#1774323870
+/opt/nvim-linux-x86_64/bin/nvim
+#1774179449
+# -> -clipboard
+#1774180580
+mv 26_mypro.tex 26_mypro
+#1774181261
+vim 26_mypro.tex
+#1774237803
+git add .
+#1774237821
+git commit -m "added mypro"
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270408
+nvim --version
+#1774176837
+cd 2511_Tgroup_Report/
+#1774176841
+vim report.tex 
+#1774179217
+mkdir 26_mypro
+#1774179428
+sudo apt install vim-gnome
+#1774179435
+sudo apt install vim-gtk3
+#1774179449
+vim --version | grep clipboard
+#1774179449
+# -> -clipboard
+#1774180580
+mv 26_mypro.tex 26_mypro
+#1774181261
+vim 26_mypro.tex
+#1774237803
+git add .
+#1774237821
+git commit -m "added mypro"
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270110
+coee .
+#1774270731
+whitch nvim
+#1774270742
+which nvim
+#1774270744
+nvim
+#1774270751
+where nvim
+#1774271230
+rm -rf ~/.vscode-server
+#1774271240
+cat /etc/wsl.conf
+#1774271303
+sudo sh -c 'echo :WSLInterop:M::MZ::/init:PF > /usr/lib/binfmt.d/WSLInterop.conf'
+#1774271309
+sudo systemctl restart systemd-binfmt
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270787
+cd
+#1774270808
+ln -s dotfiles/.config .config
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774270986
+nvim
+#1774176841
+vim report.tex 
+#1774179217
+mkdir 26_mypro
+#1774179428
+sudo apt install vim-gnome
+#1774179435
+sudo apt install vim-gtk3
+#1774179449
+vim --version | grep clipboard
+#1774179449
+# -> -clipboard
+#1774180580
+mv 26_mypro.tex 26_mypro
+#1774181261
+vim 26_mypro.tex
+#1774237803
+git add .
+#1774237821
+git commit -m "added mypro"
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270110
+coee .
+#1774270731
+whitch nvim
+#1774270742
+which nvim
+#1774270751
+where nvim
+#1774271240
+cat /etc/wsl.conf
+#1774271303
+sudo sh -c 'echo :WSLInterop:M::MZ::/init:PF > /usr/lib/binfmt.d/WSLInterop.conf'
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270808
+ln -s dotfiles/.config .config
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774317054
+mv ~/.config/nvim ~/.config/nvim_backup
+#1774317346
+cd
+#1774317347
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+#1774317355
+sudo rm -rf /opt/nvim
+#1774317355
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+#1774317427
+rm nvim-linux64.tar.gz
+#1774317429
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+#1774317443
+sudo rm -rf /opt/nvim-linux-x86_64
+#1774317443
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+#1774317450
+sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
+#1774317455
+nvim --version
+#1774317518
+mv ~/.config/nvim_backup/ ~/.config/nvim
+#1774318450
+sudo mkdir -p /etc/binfmt.d
+#1774318459
+sudo sh -c 'echo ":WSLInterop:M::MZ::/init:PF" > /etc/binfmt.d/WSLInterop.conf'
+#1774318460
+sudo systemctl restart systemd-binfmt
+#1774318685
+rm -rf ~/.vscode-server
+#1774320103
+nvim
+#1774320443
+sudo sh -c 'echo ":WSLInterop:M::MZ::/init:PF" > /usr/lib/binfmt.d/WSLInterop.conf'
+#1774320448
+sudo systemctl unmask systemd-binfmt.service
+#1774320452
+sudo systemctl enable systemd-binfmt.service
+#1774320456
+sudo systemctl restart systemd-binfmt.service
+#1774324186
+open *pdf
+#1774324192
+vim ~/.bashrc
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774270986
+nvim
+#1774322796
+cd
+#1774322805
+cd .config
+#1774322807
+cd nvim
+#1774322808
+pwd
+#1774323424
+mv ~/.config/nvim ~/.config/nvim_temp
+#1774323698
+[200~sudo apt update
+#1774323698
+sudo apt install -y libncurses5 libxcb-shape0 libxcb-render0~
+#1774323705
+sudo apt update
+#1774323711
+sudo apt install -y libncurses5 libxcb-shape0 libxcb-render0
+#1774323722
+/opt/nvim-linux-x86_64/bin/nvim --embed --clean
+#1774323870
+/opt/nvim-linux-x86_64/bin/nvim
+#1774324272
+update
+#1774324289
+cd docs
+#1774324291
+cd doc
+#1774324295
+cd 26_mypro/
+#1774324298
+latexmk 26_mypro.tex 
+#1774324810
+mv intro.tex mypro_as_barrier
+#1774324823
+mv mypro_as_barrier.tex
+#1774324830
+mv mypro_as_barrier mypro_as_barrier.tex
+#1774324858
+vim start_from_my.tex
+#1774324899
+vim connection_with_desire.tex
+#1774324906
+vim 26_mypro.tex 
+#1774324929
+vim life_as_mypro.tex
+#1774324934
+mv 26_mypro.tex main.tex
+#1774325597
+rm -rf out
+#1774325673
+vim bib.bib
+#1774327287
+code .
+#1774327473
+ut
+#1774332332
+vim connection_with_desire.tex 
+#1774332354
+vim life_as_mypro.tex 
+#1774332384
+vim start_from_my.tex 
+#1774340433
+ll
+#1774359543
+vim mypro_as_barrier.tex 
+#1774359548
+vim intro.tex
+#1774359678
+vim bib.bib 
+#1774359842
+vim intro.tex 
+#1774485728
+vim main.tex 
+#1774485738
+latexmk main.tex 
+#1774485760
+out
+#1774485760
+pdf
+#1774693504
+..
+#1774693504
+l
+#1774324186
+open *pdf
+#1774324192
+vim ~/.bashrc
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774270986
+nvim
+#1774322796
+cd
+#1774322805
+cd .config
+#1774322807
+cd nvim
+#1774322808
+pwd
+#1774323424
+mv ~/.config/nvim ~/.config/nvim_temp
+#1774323698
+[200~sudo apt update
+#1774323698
+sudo apt install -y libncurses5 libxcb-shape0 libxcb-render0~
+#1774323705
+sudo apt update
+#1774323711
+sudo apt install -y libncurses5 libxcb-shape0 libxcb-render0
+#1774323722
+/opt/nvim-linux-x86_64/bin/nvim --embed --clean
+#1774323870
+/opt/nvim-linux-x86_64/bin/nvim
+#1774334730
+cd docs
+#1774334740
+cd 2511_Tgroup_Report/
+#1774334741
+out
+#1774334744
+pdf
+#1774359668
+cd 25_summer_research/
+#1774359895
+..
+#1774359900
+cd 26_mypro/
+#1774359900
+l
+#1774359902
+vim bib.bib 
+#1774179449
+vim --version | grep clipboard
+#1774179449
+# -> -clipboard
+#1774180564
+ll
+#1774180580
+mv 26_mypro.tex 26_mypro
+#1774181261
+vim 26_mypro.tex
+#1774237803
+git add .
+#1774237821
+git commit -m "added mypro"
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270110
+coee .
+#1774270731
+whitch nvim
+#1774270742
+which nvim
+#1774270751
+where nvim
+#1774271240
+cat /etc/wsl.conf
+#1774271303
+sudo sh -c 'echo :WSLInterop:M::MZ::/init:PF > /usr/lib/binfmt.d/WSLInterop.conf'
+#1774237830
+git push
+#1774270059
+wsl --shutdown
+#1774270808
+ln -s dotfiles/.config .config
+#1774270811
+ll
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774316681
+update
+#1774317054
+mv ~/.config/nvim ~/.config/nvim_backup
+#1774317347
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+#1774317355
+sudo rm -rf /opt/nvim
+#1774317355
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+#1774317427
+rm nvim-linux64.tar.gz
+#1774317429
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+#1774317443
+sudo rm -rf /opt/nvim-linux-x86_64
+#1774317443
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+#1774317450
+sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/nvim
+#1774317455
+nvim --version
+#1774317518
+mv ~/.config/nvim_backup/ ~/.config/nvim
+#1774318450
+sudo mkdir -p /etc/binfmt.d
+#1774318459
+sudo sh -c 'echo ":WSLInterop:M::MZ::/init:PF" > /etc/binfmt.d/WSLInterop.conf'
+#1774318460
+sudo systemctl restart systemd-binfmt
+#1774318685
+rm -rf ~/.vscode-server
+#1774320103
+nvim
+#1774320443
+sudo sh -c 'echo ":WSLInterop:M::MZ::/init:PF" > /usr/lib/binfmt.d/WSLInterop.conf'
+#1774320448
+sudo systemctl unmask systemd-binfmt.service
+#1774320452
+sudo systemctl enable systemd-binfmt.service
+#1774320456
+sudo systemctl restart systemd-binfmt.service
+#1774320467
+code .
+#1774324070
+vim 26_mypro.tex 
+#1774324146
+latexmk 26_mypro.tex 
+#1774324186
+open *pdf
+#1774324192
+vim ~/.bashrc
+#1774270954
+which nvim
+#1774270965
+type -a nvim
+#1774270986
+nvim
+#1774322805
+cd .config
+#1774322807
+cd nvim
+#1774322808
+pwd
+#1774323424
+mv ~/.config/nvim ~/.config/nvim_temp
+#1774323698
+[200~sudo apt update
+#1774323698
+sudo apt install -y libncurses5 libxcb-shape0 libxcb-render0~
+#1774323705
+sudo apt update
+#1774323711
+sudo apt install -y libncurses5 libxcb-shape0 libxcb-render0
+#1774323722
+/opt/nvim-linux-x86_64/bin/nvim --embed --clean
+#1774323870
+/opt/nvim-linux-x86_64/bin/nvim
+#1774360930
+cd pp.1-27/
+#1774411420
+cd 26_
+#1774411424
+cd 26_mypro/
+#1774411604
+cd docs/
+#1774411692
+ln -s /mnt/c/Users/kojda/OneDrive/Desktop/project/ project
+#1774411694
+cd project
+#1774411695
+cd 25年度マイプロ全国サミット/
+#1774411702
+mkdir atena
+#1774411705
+cd atena/
+#1774411895
+vim atena.tex
+#1774411901
+latexmk atena.tex 
+#1774424680
+cd
+#1774424682
+mkdir test
+#1774424684
+cd test
+#1774424691
+mkdir 顧客1
+#1774424693
+mkdir 顧客2
+#1774424695
+mkdir 顧客3
+#1774424700
+cd 顧客
+#1774424705
+rm -rf test/
+#1774693509
+cd docs
+#1774693522
+cd schein-2002/
+#1774693525
+cd pp.41-56/
+#1774693527
+out
+#1774693527
+pdf
+#1774758966
+cd 26_JSET_spring/
+#1774758969
+vim 26_JSET_spring.tex 
+#1774759000
+..
+#1774759006
+cd 2603_Nutrition/
+#1774759007
+l
+#1774759009
+vim S6-S7.tex 
+#1774411901
+latexmk atena.tex 
+#1774424680
+cd
+#1774424682
+mkdir test
+#1774424684
+cd test
+#1774424691
+mkdir 顧客1
+#1774424693
+mkdir 顧客2
+#1774424695
+mkdir 顧客3
+#1774424700
+cd 顧客
+#1774424705
+rm -rf test/
+#1774693522
+cd schein-2002/
+#1774693525
+cd pp.41-56/
+#1774758966
+cd 26_JSET_spring/
+#1774758969
+vim 26_JSET_spring.tex 
+#1774773464
+cd dcos
+#1774773469
+cd docs
+#1774773476
+cd 2603_Nutrition/
+#1774773706
+sudo apt update
+#1774773748
+sudo apt install texlive-science texlive-fonts-extra
+#1774774288
+l
+#1774774294
+vim *log
+#1774774308
+latexmk S6-S7.tex 
+#1774774365
+out
+#1774774368
+pdf
+#1774774469
+..
+#1774774472
+vim S6-S7.tex 
+#1774774472
+vim S6-S7.tex 
+#1775480743
+..
+#1775480744
+l
+#1774411604
+cd docs/
+#1774411692
+ln -s /mnt/c/Users/kojda/OneDrive/Desktop/project/ project
+#1774411694
+cd project
+#1774411695
+cd 25年度マイプロ全国サミット/
+#1774411702
+mkdir atena
+#1774411705
+cd atena/
+#1774411895
+vim atena.tex
+#1774411901
+latexmk atena.tex 
+#1774424680
+cd
+#1774424682
+mkdir test
+#1774424684
+cd test
+#1774424691
+mkdir 顧客1
+#1774424693
+mkdir 顧客2
+#1774424695
+mkdir 顧客3
+#1774424700
+cd 顧客
+#1774424705
+rm -rf test/
+#1774693522
+cd schein-2002/
+#1774693525
+cd pp.41-56/
+#1774758966
+cd 26_JSET_spring/
+#1774758969
+vim 26_JSET_spring.tex 
+#1774759006
+cd 2603_Nutrition/
+#1774759009
+vim S6-S7.tex 
+#1774411901
+latexmk atena.tex 
+#1774424680
+cd
+#1774424682
+mkdir test
+#1774424684
+cd test
+#1774424691
+mkdir 顧客1
+#1774424693
+mkdir 顧客2
+#1774424695
+mkdir 顧客3
+#1774424700
+cd 顧客
+#1774424705
+rm -rf test/
+#1774693522
+cd schein-2002/
+#1774693525
+cd pp.41-56/
+#1774758966
+cd 26_JSET_spring/
+#1774758969
+vim 26_JSET_spring.tex 
+#1774773464
+cd dcos
+#1774773476
+cd 2603_Nutrition/
+#1774773706
+sudo apt update
+#1774773748
+sudo apt install texlive-science texlive-fonts-extra
+#1774774308
+latexmk S6-S7.tex 
+#1774774472
+vim S6-S7.tex 
+#1775167830
+cd docs
+#1775167838
+mkdir sawada_design
+#1775168143
+cd out
+#1775168146
+vim *log
+#1775168594
+vim design.tex
+#1775168621
+latexmk design.tex 
+#1775253573
+cd sawada_design/
+#1775253575
+vim design.tex 
+#1775471884
+cd 26_
+#1775472189
+codoe .
+#1775472505
+cd 25_summer_research/
+#1775472516
+cd 26_mypro/
+#1775472518
+vim bib.bib 
+#1775473000
+vi mi
+#1775473006
+latexmk main.tex 
+#1775473024
+out
+#1775473024
+pdf
+#1775473249
+..
+#1775473251
+code .
+#1775475124
+l
+#1775475127
+vim intro.tex 
+#1774424682
+mkdir test
+#1774424684
+cd test
+#1774424691
+mkdir 顧客1
+#1774424693
+mkdir 顧客2
+#1774424695
+mkdir 顧客3
+#1774424700
+cd 顧客
+#1774424705
+rm -rf test/
+#1774693522
+cd schein-2002/
+#1774693525
+cd pp.41-56/
+#1774758966
+cd 26_JSET_spring/
+#1774758969
+vim 26_JSET_spring.tex 
+#1774773464
+cd dcos
+#1774773476
+cd 2603_Nutrition/
+#1774773706
+sudo apt update
+#1774773748
+sudo apt install texlive-science texlive-fonts-extra
+#1774774294
+vim *log
+#1774774308
+latexmk S6-S7.tex 
+#1774774472
+vim S6-S7.tex 
+#1774774472
+vim S6-S7.tex 
+#1774411604
+cd docs/
+#1774411692
+ln -s /mnt/c/Users/kojda/OneDrive/Desktop/project/ project
+#1774411694
+cd project
+#1774411695
+cd 25年度マイプロ全国サミット/
+#1774411702
+mkdir atena
+#1774411705
+cd atena/
+#1774411895
+vim atena.tex
+#1774411901
+latexmk atena.tex 
+#1774424682
+mkdir test
+#1774424684
+cd test
+#1774424691
+mkdir 顧客1
+#1774424693
+mkdir 顧客2
+#1774424695
+mkdir 顧客3
+#1774424700
+cd 顧客
+#1774424705
+rm -rf test/
+#1774693522
+cd schein-2002/
+#1774693525
+cd pp.41-56/
+#1774758966
+cd 26_JSET_spring/
+#1774758969
+vim 26_JSET_spring.tex 
+#1774759006
+cd 2603_Nutrition/
+#1774759009
+vim S6-S7.tex 
+#1774411901
+latexmk atena.tex 
+#1774424682
+mkdir test
+#1774424684
+cd test
+#1774424691
+mkdir 顧客1
+#1774424693
+mkdir 顧客2
+#1774424695
+mkdir 顧客3
+#1774424700
+cd 顧客
+#1774424705
+rm -rf test/
+#1774693522
+cd schein-2002/
+#1774693525
+cd pp.41-56/
+#1774758966
+cd 26_JSET_spring/
+#1774758969
+vim 26_JSET_spring.tex 
+#1774773464
+cd dcos
+#1774773476
+cd 2603_Nutrition/
+#1774773706
+sudo apt update
+#1774773748
+sudo apt install texlive-science texlive-fonts-extra
+#1774774308
+latexmk S6-S7.tex 
+#1774774472
+vim S6-S7.tex 
+#1775167838
+mkdir sawada_design
+#1775168143
+cd out
+#1775168146
+vim *log
+#1775168594
+vim design.tex
+#1775168621
+latexmk design.tex 
+#1775253573
+cd sawada_design/
+#1775253575
+vim design.tex 
+#1775471884
+cd 26_
+#1775472189
+codoe .
+#1775472505
+cd 25_summer_research/
+#1775472516
+cd 26_mypro/
+#1775472518
+vim bib.bib 
+#1775473000
+vi mi
+#1775473006
+latexmk main.tex 
+#1775473251
+code .
+#1775475127
+vim intro.tex 
+#1776682205
+Ll
+#1776682208
+mkdir 営業
+#1776682218
+mv 営業/ e_営業
+#1776682220
+c ee
+#1776682237
+mkdir 01_事前準備
+#1776682440
+vim 事前準備シート.tex
+#1776683099
+...
+#1776683103
+cd docs
+#1776683110
+cd Reflection_Sheet/
+#1776683115
+latexmk ORJI_Reflection_Sheet.tex 
+#1776686084
+cd mitemo/
+#1776693859
+vim
+#1776722139
+p@df
+#1777271560
+cd
+#1777271561
+cd mitemo
+#1777271568
+cd J_事後報告書/
+#1777271578
+cd 2402_その他タスク/
+#1777276706
+update
+#1777334139
+cd e_営業/
+#1777334151
+mv e_営業/ HR-Sol-PD
+#1777334154
+cd HR-Sol-PD/
+#1777334157
+cd 01_事前準備/
+#1777334163
+vim 事前
+#1777339878
+rm -rf out
+#1777340087
+viP
+#1777340100
+l
+#1777340106
+latexmk 事前準備シート.tex 
+#1777340423
+out
+#1777340424
+pdf
+#1777340788
+..
+#1777340788
+vim 事前準備シート.tex 
+#1777339878
+rm -rf out
+#1777340087
+viP
+#1777340106
+latexmk 事前準備シート.tex 
+#1777340423
+out
+#1777340424
+pdf
+#1777340788
+..
+#1777340788
+vim 事前準備シート.tex 
+#1777504977
+mv ws_facilitation_map.html mitemo
+#1777505561
+cd mitemo
+#1777506259
+l
+#1777559381
+vim
+#1777560805
+vim ws_facilitation_map.html 
+#1776686084
+cd mitemo/
+#1776693859
+vim
+#1776722139
+p@df
+#1777271560
+cd
+#1777271568
+cd J_事後報告書/
+#1777271578
+cd 2402_その他タスク/
+#1777334139
+cd e_営業/
+#1777334151
+mv e_営業/ HR-Sol-PD
+#1777334154
+cd HR-Sol-PD/
+#1777334157
+cd 01_事前準備/
+#1777334163
+vim 事前
+#1777339878
+rm -rf out
+#1777340087
+viP
+#1777340106
+latexmk 事前準備シート.tex 
+#1777340788
+vim 事前準備シート.tex 
+#1777339878
+rm -rf out
+#1777340087
+viP
+#1777340106
+latexmk 事前準備シート.tex 
+#1777340788
+vim 事前準備シート.tex 
+#1777504977
+mv ws_facilitation_map.html mitemo
+#1777559381
+vim
+#1777600081
+update
+#1777600122
+cd mitemo
+#1777600123
+vim ws_facilitation_map.html 
+#1777628498
+cd docs
+#1777628504
+cd 26_mypro/
+#1777628740
+vim main.
+#1777629177
+latexmk main.tex 
+#1777632289
+out
+#1777632290
+pdf
+#1777775290
+l
+#1777775291
+..
+#1777775292
+vim main.tex 
+#1776686084
+cd mitemo/
+#1776693859
+vim
+#1776722139
+p@df
+#1777271568
+cd J_事後報告書/
+#1777271578
+cd 2402_その他タスク/
+#1777334139
+cd e_営業/
+#1777334151
+mv e_営業/ HR-Sol-PD
+#1777334163
+vim 事前
+#1777339878
+rm -rf out
+#1777340087
+viP
+#1777339878
+rm -rf out
+#1777340087
+viP
+#1777504977
+mv ws_facilitation_map.html mitemo
+#1777559381
+vim
+#1777938217
+upadte
+#1777938219
+update
+#1777984527
+cd
+#1777984529
+cd mitemo
+#1778141172
+cd e
+#1778141174
+cd e_
+#1778141180
+cd HR-Sol-PD/
+#1778141181
+cd 01_事前準備/
+#1778141182
+l;
+#1778141183
+out
+#1778141186
+pdf
+#1778141341
+...
+#1778141343
+..
+#1778141627
+cd HR-Sol-PD/01_事前準備/
+#1778141632
+vim 事前準備シート.tex 
+#1778141675
+latexmk 事前準備シート.tex 
+#1778141692
+cd -
+#1778141692
+l
+#1778141694
+vim ws_facilitation_map.html 
+#1778143302
+python -m http.server 8080
+#1778143307
+python3 -m http.server 8080
+#1778143302
+python -m http.server 8080
+#1778143307
+python3 -m http.server 8080
+#1778664662
+cd docs/
+#1778664666
+cd schein-2002/
+#1778664687
+cp -r pp.41-56/ active-vs-humble
+#1778664689
+cd active-vs-humble/
+#1778664689
+l
+#1778664698
+mv pp.41-56.tex active-vs-humble.tex
+#1778664701
+vim active-vs-humble.tex 
+#1777271578
+cd 2402_その他タスク/
+#1777334139
+cd e_営業/
+#1777334151
+mv e_営業/ HR-Sol-PD
+#1777334154
+cd HR-Sol-PD/
+#1777334157
+cd 01_事前準備/
+#1777334163
+vim 事前
+#1777340087
+viP
+#1777340106
+latexmk 事前準備シート.tex 
+#1777340788
+vim 事前準備シート.tex 
+#1777340087
+viP
+#1777340106
+latexmk 事前準備シート.tex 
+#1777340788
+vim 事前準備シート.tex 
+#1777504977
+mv ws_facilitation_map.html mitemo
+#1777559381
+vim
+#1777628504
+cd 26_mypro/
+#1777628740
+vim main.
+#1777629177
+latexmk main.tex 
+#1777775292
+vim main.tex 
+#1776686084
+cd mitemo/
+#1776693859
+vim
+#1776722139
+p@df
+#1777271568
+cd J_事後報告書/
+#1777271578
+cd 2402_その他タスク/
+#1777334139
+cd e_営業/
+#1777334151
+mv e_営業/ HR-Sol-PD
+#1777334163
+vim 事前
+#1777340087
+viP
+#1777340087
+viP
+#1777504977
+mv ws_facilitation_map.html mitemo
+#1777559381
+vim
+#1777938217
+upadte
+#1778141172
+cd e
+#1778141174
+cd e_
+#1778141180
+cd HR-Sol-PD/
+#1778141181
+cd 01_事前準備/
+#1778141182
+l;
+#1778141341
+...
+#1778141627
+cd HR-Sol-PD/01_事前準備/
+#1778141632
+vim 事前準備シート.tex 
+#1778141675
+latexmk 事前準備シート.tex 
+#1778141692
+cd -
+#1778143302
+python -m http.server 8080
+#1778143307
+python3 -m http.server 8080
+#1778143302
+python -m http.server 8080
+#1778143307
+python3 -m http.server 8080
+#1778664662
+cd docs/
+#1778664687
+cp -r pp.41-56/ active-vs-humble
+#1778664698
+mv pp.41-56.tex active-vs-humble.tex
+#1778664766
+cd docs/schein-2002/active-vs-humble/
+#1778664768
+rm -rf out
+#1778665006
+mv /mnt/c/Users/kojda/Downloads/humble.jpg .
+#1778665166
+vim active-vs-humble.tex 
+#1778665178
+latexmk active-vs-humble.tex 
+#1778905555
+cd docs/l
+#1778905557
+cd docs
+#1778905566
+cd schein-2002/
+#1778905569
+cd active-vs-humble/
+#1778905571
+out
+#1778905572
+pdf
+#1778905588
+..
+#1778905611
+jl
+#1779062299
+cd
+#1779062302
+cd mitemo
+#1779062306
+vim ws_facilitation_map.html 
+#1779180618
+update
+#1779180661
+l
+#1779180662
+exit
+#1777560805
+vim ws_facilitation_map.html 
+#1776686084
+cd mitemo/
+#1776722139
+p@df
+#1777271568
+cd J_事後報告書/
+#1777271578
+cd 2402_その他タスク/
+#1777334139
+cd e_営業/
+#1777334151
+mv e_営業/ HR-Sol-PD
+#1777334154
+cd HR-Sol-PD/
+#1777334157
+cd 01_事前準備/
+#1777334163
+vim 事前
+#1777340087
+viP
+#1777340106
+latexmk 事前準備シート.tex 
+#1777340788
+vim 事前準備シート.tex 
+#1777340087
+viP
+#1777340106
+latexmk 事前準備シート.tex 
+#1777340788
+vim 事前準備シート.tex 
+#1777504977
+mv ws_facilitation_map.html mitemo
+#1777600081
+update
+#1777600123
+vim ws_facilitation_map.html 
+#1777628504
+cd 26_mypro/
+#1777628740
+vim main.
+#1777629177
+latexmk main.tex 
+#1777775292
+vim main.tex 
+#1776686084
+cd mitemo/
+#1776722139
+p@df
+#1777271568
+cd J_事後報告書/
+#1777271578
+cd 2402_その他タスク/
+#1777334139
+cd e_営業/
+#1777334151
+mv e_営業/ HR-Sol-PD
+#1777334163
+vim 事前
+#1777340087
+viP
+#1777340087
+viP
+#1777504977
+mv ws_facilitation_map.html mitemo
+#1777938217
+upadte
+#1777938219
+update
+#1778141172
+cd e
+#1778141174
+cd e_
+#1778141180
+cd HR-Sol-PD/
+#1778141181
+cd 01_事前準備/
+#1778141182
+l;
+#1778141341
+...
+#1778141627
+cd HR-Sol-PD/01_事前準備/
+#1778141632
+vim 事前準備シート.tex 
+#1778141675
+latexmk 事前準備シート.tex 
+#1778141692
+cd -
+#1778141694
+vim ws_facilitation_map.html 
+#1778143302
+python -m http.server 8080
+#1778143307
+python3 -m http.server 8080
+#1778630587
+cd docs
+#1778630592
+cp -r 25_summer_research/
+#1778630610
+cp -r 25_summer_research/ seibu-HD
+#1778630619
+mv seibu-HD/ ../mitemo/
+#1778630831
+rm bib.bib 
+#1778630844
+mv 25_summer_research.tex seibu-HD-WS.tex
+#1778631124
+rm -rf out
+#1778631182
+vim *log
+#1778631298
+cp /mnt/c/Windows/Fonts/
+#1778631358
+cp -r /mnt/c/Windows/Fonts/msmincho* ~/.fonts
+#1778631366
+cp -r /mnt/c/Windows/Fonts/msgothic* ~/.fonts
+#1778631384
+cp /mnt/c/Windows/Fonts/msgothic* ~/.fonts
+#1778631393
+ls ~/.fonts
+#1778631840
+fc-cache -fv
+#1778631845
+luaotfload-tool -fu
+#1778631941
+cd -r ~/.fonts
+#1778631947
+cd -p ~/.fonts
+#1778631951
+cd ~
+#1778631952
+.
+#1778631958
+ll
+#1778631974
+rm .fonts
+#1778631984
+mkdir .fonts
+#1778631986
+cd .fonts
+#1778632006
+mv /mnt/c/Users/kojda/Downloads/*.ttc /.
+#1778632008
+mv /mnt/c/Users/kojda/Downloads/*.ttc .
+#1778632012
+cd
+#1778632016
+cd mitemo
+#1778632018
+cd seibu-HD/
+#1778649479
+..
+#1778649480
+vim seibu-HD-WS.tex 
+#1778649487
+latexmk seibu-HD-WS.tex 
+#1778649500
+out
+#1778649501
+pdf
+#1778663805
+vim
+#1779180668
+l
+#1779180669
+exit
+#1778663805
+vim
+#1779180669
+exit
+#1779631495
+cd docs
+#1779631498
+cd Reflection_Sheet/
+#1779631498
+l
+#1779631500
+vim ORJI_Reflection_Sheet.tex 
+#1778630844
+mv 25_summer_research.tex seibu-HD-WS.tex
+#1778631124
+rm -rf out
+#1778631182
+vim *log
+#1778631298
+cp /mnt/c/Windows/Fonts/
+#1778631358
+cp -r /mnt/c/Windows/Fonts/msmincho* ~/.fonts
+#1778631366
+cp -r /mnt/c/Windows/Fonts/msgothic* ~/.fonts
+#1778631384
+cp /mnt/c/Windows/Fonts/msgothic* ~/.fonts
+#1778631393
+ls ~/.fonts
+#1778631840
+fc-cache -fv
+#1778631845
+luaotfload-tool -fu
+#1778631941
+cd -r ~/.fonts
+#1778631947
+cd -p ~/.fonts
+#1778631951
+cd ~
+#1778631952
+.
+#1778631958
+ll
+#1778631974
+rm .fonts
+#1778631984
+mkdir .fonts
+#1778631986
+cd .fonts
+#1778632006
+mv /mnt/c/Users/kojda/Downloads/*.ttc /.
+#1778632008
+mv /mnt/c/Users/kojda/Downloads/*.ttc .
+#1778632016
+cd mitemo
+#1778632018
+cd seibu-HD/
+#1778649480
+vim seibu-HD-WS.tex 
+#1778649487
+latexmk seibu-HD-WS.tex 
+#1779180669
+exit
+#1779519348
+cd mypro_PC-WS/
+#1779519351
+vim PC-WS.tex 
+#1779524732
+pwd
+#1779524734
+..
+#1779586623
+cd docs
+#1779586678
+cd schein-2002/
+#1779586682
+cd active-vs-humble/
+#1779586684
+vim active-vs-humble.tex 
+#1779586747
+cd /mnt/c/Users/kojda/Downloads/
+#1779586754
+vim sample.tex 
+#1779587425
+latexmk hogehoge.tex 
+#1779587479
+out
+#1779587480
+pdf
+#1779587812
+cd
+#1779631172
+l
+#1779631226
+vim
+#1780100926
+l
+#1780101197
+cd
+#1780101212
+ln -s /mnt/c/Users/kojda/.wezterm.lua .wezterm.lua
+#1780101214
+vim .wezterm.lua 
+#1780101544
+ls
+#1780101547
+l
+#1780101548
+exit
+#1780101612
+ls
+#1778632016
+cd mitemo
+#1778632018
+cd seibu-HD/
+#1778649480
+vim seibu-HD-WS.tex 
+#1778649487
+latexmk seibu-HD-WS.tex 
+#1779519348
+cd mypro_PC-WS/
+#1779519351
+vim PC-WS.tex 
+#1779524734
+..
+#1779586623
+cd docs
+#1779586678
+cd schein-2002/
+#1779586682
+cd active-vs-humble/
+#1779586684
+vim active-vs-humble.tex 
+#1779586747
+cd /mnt/c/Users/kojda/Downloads/
+#1779586754
+vim sample.tex 
+#1779587425
+latexmk hogehoge.tex 
+#1779587479
+out
+#1779587480
+pdf
+#1779631226
+vim
+#1780098973
+vim /mnt/c/Users/.wezterm.lua
+#1780099022
+cd /mnt/c/Users/
+#1780099028
+pw
+#1780099043
+touch .wezterm.lua
+#1780099059
+sudo touch .wezterm.lua
+#1780099076
+cd kojda/
+#1780099091
+vim .wezterm.lua
+#1780099112
+update
+#1780099872
+vim ~/.bashrc
+#1780100289
+ll
+#1780100404
+cd
+#1780100408
+pwd
+#1780100408
+ls
+#1780100773
+cd /mnt/c/Users/kojda/
+#1780100774
+l
+#1780100776
+vim .wezterm.lua 
+#1780102325
+exit
+#1780101197
+cd
+#1780101212
+ln -s /mnt/c/Users/kojda/.wezterm.lua .wezterm.lua
+#1780101544
+ls
+#1780101548
+exit
+#1780101571
+pwd
+#1780101598
+rm -rf nvim-linux*
+#1780102067
+Hello
+#1780102070
+hello
+#1780102079
+apt install sl
+#1780102082
+sudo apt install sl
+#1780102103
+sl
+#1780102275
+l
+#1780102382
+wezterm show-keys
+#1780102684
+vim .wezterm.lua 
+#1780102325
+exit
+#1780102993
+vim ~/.bashr
+#1780103026
+vim .wezterm.lua 
+#1780103095
+nvim
+#1780103105
+l
+#1780103206
+vim ~/.bashrc
+#1780103237
+source ~/.bashrc
+#1780111788
+vim ~/.inputrc
+#1780111802
+bind -f ~/.inputrc
+#1780111823
+clear
+#1780112074
+vim
+#1780111925
+l
+#1780111928
+vim
+#1780103105
+l
+#1780103206
+vim ~/.bashrc
+#1780103237
+source ~/.bashrc
+#1780111823
+clear
+#1780112352
+
+#1780112397
+bind -f ~/.inputrc
+#1780112405
+
+#1780112412
+vim ~/.inputrc
+#1780112432
+
+#1780112586
+clear
+#1780112586
+-- 5. WezTermのステータスバー（右下）にモードを表示する
+#1780112587
+-- ============================================================================
+#1780112587
+wezterm.on("update-right-status", function(window, pane)
+#1780112587
+local status = ""
+#1780112587
+-- Leaderキーが押されて待機中の場合
+#1780112587
+if window:leader_is_active() then
+#1780112587
+status = " LEADER "
+#1780112588
+end
+#1780112588
+-- コピーモード（Leader + [）などの特殊モードに入っている場合
+#1780112588
+local key_table = window:active_key_table()
+#1780112588
+if key_table then
+#1780112587
+wezterm.on("update-right-status", function(window, pane)
+#1780112587
+local status = ""
+#1780112587
+-- Leaderキーが押されて待機中の場合
+#1780112587
+if window:leader_is_active() then
+#1780112587
+status = " LEADER "
+#1780112588
+end
+#1780112588
+-- コピーモード（Leader + [）などの特殊モードに入っている場合
+#1780112588
+local key_table = window:active_key_table()
+#1780112588
+if key_table then
+#1780481912
+update
+#1780481985
+cd /mnt/c/Users/kojda/OneDrive/Desktop/
+#1780481993
+mkdir dev
+#1780481997
+cd
+#1780482017
+ln -s /mnt/c/Users/kojda/OneDrive/Desktop/dev dev
+#1780482029
+cd dev
+#1780482081
+mkdir PC-Practice
+#1780482082
+cd PC-Practice/
+#1780482115
+vim Claude.md
+#1780482131
+Claude
+#1780482213
+claude logout
+#1780493027
+pwd
+#1780493029
+ls
+#1780493031
+..
+#1780493033
+cd pc-app/
+#1780493034
+l
+#1780493042
+claude
+#1780099872
+vim ~/.bashrc
+#1780100289
+ll
+#1780100773
+cd /mnt/c/Users/kojda/
+#1780100776
+vim .wezterm.lua 
+#1780102325
+exit
+#1780101212
+ln -s /mnt/c/Users/kojda/.wezterm.lua .wezterm.lua
+#1780101548
+exit
+#1780101598
+rm -rf nvim-linux*
+#1780102067
+Hello
+#1780102070
+hello
+#1780102079
+apt install sl
+#1780102082
+sudo apt install sl
+#1780102103
+sl
+#1780102382
+wezterm show-keys
+#1780102684
+vim .wezterm.lua 
+#1780102325
+exit
+#1780102993
+vim ~/.bashr
+#1780103026
+vim .wezterm.lua 
+#1780103095
+nvim
+#1780103206
+vim ~/.bashrc
+#1780111788
+vim ~/.inputrc
+#1780111802
+bind -f ~/.inputrc
+#1780111823
+clear
+#1780112074
+vim
+#1780111928
+vim
+#1780103206
+vim ~/.bashrc
+#1780111823
+clear
+#1780112397
+bind -f ~/.inputrc
+#1780112412
+vim ~/.inputrc
+#1780112586
+clear
+#1780112586
+-- 5. WezTermのステータスバー（右下）にモードを表示する
+#1780112587
+-- ============================================================================
+#1780112587
+wezterm.on("update-right-status", function(window, pane)
+#1780112587
+local status = ""
+#1780112587
+-- Leaderキーが押されて待機中の場合
+#1780112587
+if window:leader_is_active() then
+#1780112587
+status = " LEADER "
+#1780112588
+end
+#1780112588
+-- コピーモード（Leader + [）などの特殊モードに入っている場合
+#1780112588
+local key_table = window:active_key_table()
+#1780112588
+if key_table then
+#1780140171
+
+#1780192144
+fzf
+#1780210881
+c
+#1780210884
+cd docs
+#1780210974
+cp ../note_workspace/knowledges/25_summer_research/ 25_summer_research
+#1780210982
+cp -r ../note_workspace/knowledges/25_summer_research/ 25_summer_research
+#1780211072
+source ~/.bashrc
+#1780211082
+ls | fzf
+#1780211090
+claude
+#1780211151
+ff
+#1780211164
+open 25_summer_research.pdf 
+#1780481901
+
+#1780482098
+cd
+#1780482101
+cd dev
+#1780482103
+cd PC-Practice/
+#1780482865
+pwd
+#1780482866
+ls
+#1780488450
+vim .env.local 
+#1780492406
+rm PC-Practice/
+#1780492410
+rm -rf PC-Practice/
+#1780492412
+cd pc-app/
+#1780493688
+cd schein-2002/
+#1780493692
+vim schein.md
+#1780493696
+..
+#1780497917
+npm run dev
+#1780498061
+l
+#1780498173
+vim CLAUDE.md 
+#1780112588
+-- コピーモード（Leader + [）などの特殊モードに入っている場合
+#1780112588
+local key_table = window:active_key_table()
+#1780112588
+if key_table then
+#1780128198
+aichat
+#1780128257
+curl -sSf https://raw.githubusercontent.com/sigoden/aichat/main/install.sh | sh -s -- -d ~/.local/biN
+#1780128259
+#
+#1780128405
+curl -sSf https://raw.githubusercontent.com/sigoden/aichat/main/install.sh | sh -s -- -d ~/.local/bin
+#1780129483
+aude
+#1780130266
+ls
+#1780130269
+cd note_workspace/
+#1780130269
+l
+#1780130271
+claude
+#1779180669
+exit
+#1779519348
+cd mypro_PC-WS/
+#1779519351
+vim PC-WS.tex 
+#1779586623
+cd docs
+#1779586678
+cd schein-2002/
+#1779586682
+cd active-vs-humble/
+#1779586684
+vim active-vs-humble.tex 
+#1779586747
+cd /mnt/c/Users/kojda/Downloads/
+#1779586754
+vim sample.tex 
+#1779587425
+latexmk hogehoge.tex 
+#1779587479
+out
+#1779587480
+pdf
+#1780101212
+ln -s /mnt/c/Users/kojda/.wezterm.lua .wezterm.lua
+#1780101214
+vim .wezterm.lua 
+#1780101548
+exit
+#1778632016
+cd mitemo
+#1778632018
+cd seibu-HD/
+#1778649480
+vim seibu-HD-WS.tex 
+#1778649487
+latexmk seibu-HD-WS.tex 
+#1779519348
+cd mypro_PC-WS/
+#1779519351
+vim PC-WS.tex 
+#1779586623
+cd docs
+#1779586678
+cd schein-2002/
+#1779586682
+cd active-vs-humble/
+#1779586684
+vim active-vs-humble.tex 
+#1779586747
+cd /mnt/c/Users/kojda/Downloads/
+#1779586754
+vim sample.tex 
+#1779587425
+latexmk hogehoge.tex 
+#1779587479
+out
+#1779587480
+pdf
+#1780098973
+vim /mnt/c/Users/.wezterm.lua
+#1780099022
+cd /mnt/c/Users/
+#1780099028
+pw
+#1780099043
+touch .wezterm.lua
+#1780099059
+sudo touch .wezterm.lua
+#1780099076
+cd kojda/
+#1780099091
+vim .wezterm.lua
+#1780099112
+update
+#1780099872
+vim ~/.bashrc
+#1780100289
+ll
+#1780100773
+cd /mnt/c/Users/kojda/
+#1780100776
+vim .wezterm.lua 
+#1780102325
+exit
+#1780101212
+ln -s /mnt/c/Users/kojda/.wezterm.lua .wezterm.lua
+#1780101548
+exit
+#1780101598
+rm -rf nvim-linux*
+#1780102067
+Hello
+#1780102070
+hello
+#1780102079
+apt install sl
+#1780102082
+sudo apt install sl
+#1780102103
+sl
+#1780102382
+wezterm show-keys
+#1780102684
+vim .wezterm.lua 
+#1780102325
+exit
+#1780102993
+vim ~/.bashr
+#1780103026
+vim .wezterm.lua 
+#1780103206
+vim ~/.bashrc
+#1780111802
+bind -f ~/.inputrc
+#1780111823
+clear
+#1780103206
+vim ~/.bashrc
+#1780111823
+clear
+#1780112397
+bind -f ~/.inputrc
+#1780112706
+vim ~/.vimrc
+#1780116364
+
+#1780116382
+vim ~/.inputrc
+#1780125900
+man ls
+#1780125921
+man -help
+#1780125953
+
+#1780125973
+vim ~/.wezterm.lua 
+#1780126502
+nivm
+#1780126504
+vim
+#1780126507
+nvim
+#1780128515
+docs
+#1780129503
+
+#1780129710
+://github.com/zk-org/zk/releases/latest/download/zk-v0.14.1-linux-amd64.tar.gz | tar -xz -C ~/.local/bin zK
+#1780129713
+curl -L https://github.com/zk-org/zk/releases/latest/download/zk-v0.14.1-linux-amd64.tar.gz | tar -xz -C ~/.local/bin zk
+#1780129861
+cd /tmp
+#1780129866
+LATEST_URL=$(curl -s https://api.github.com/repos/zk-org/zk/releases/latest | grep "browser_download_url.*linux-amd64\.tar\.gz" | cut -d '"' -f 4)
+#1780129871
+curl -sL "$LATEST_URL" -o zk.tar.gz
+#1780129887
+tar -xzf zk.tar.gz
+#1780129896
+rm zk.tar.gz
+#1780129932
+wget https://github.com/nakachan-ing/Zettelkasten-cli/releases/download/v3.0.0/zk-linux
+#1780130045
+mkdir -p ~/.local/bin
+#1780130049
+mv zk-mac /usr/local/bin/zk
+#1780130057
+mv zk ~/.local/bin/
+#1780130060
+zk
+#1780130098
+cd
+#1780130102
+mkdir -p ~/note_workspace
+#1780130117
+zk init
+#1780131092
+cd 00_ideas/
+#1780131098
+rm *
+#1780131102
+cd 01_drafts/
+#1780131113
+cd templates/
+#1780131186
+pwdl
+#1780131260
+vim 
+#1780131508
+
+#1780131515
+vim 休日も自然と早起きできる2つのポイント
+#1780131546
+zk new --title "休日も自然と早起きできる2つのポイント" 02_published/
+#1780131585
+rm -rf 体験学習支援者としてメンターに何ができるか 
+#1780131680
+zk new --title "体験学習支援者としてメンターに何ができるか" 02_published/
+#1780137407
+mv /mnt/c/Users/kojda/Downloads/2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1 .
+#1780137433
+mv 2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1/ exported_note
+#1780137735
+rm -rf exported_note/
+#1780137738
+cd 02_published/
+#1780137803
+zk ls
+#1780137805
+zk list
+#1780139013
+fzf
+#1780139025
+sudp apt install fzf
+#1780139033
+sudo apt install fzf
+#1780139231
+fzf --version
+#1780139476
+zke 
+#1780139706
+fzf | xargs rm
+#1780196433
+source ~/.bashrc
+#1780196435
+ff
+#1780197832
+mv 
+#1780197892
+mv docs/25_summer_research/ note_workspace/knowledges/
+#1780197895
+cd -
+#1780211011
+cd note_workspace/
+#1780211014
+cd knowledges/
+#1780211040
+cp -r 25_summer_research/ ../../docs/
+#1780218493
+ls
+#1780218499
+pwd
+#1780218499
+..
+#1780218499
+l
+#1780218503
+zk e
+#1780139033
+sudo apt install fzf
+#1780139231
+fzf --version
+#1780139476
+zke 
+#1780139706
+fzf | xargs rm
+#1780196433
+source ~/.bashrc
+#1780196435
+ff
+#1780197832
+mv 
+#1780197892
+mv docs/25_summer_research/ note_workspace/knowledges/
+#1780197895
+cd -
+#1780211011
+cd note_workspace/
+#1780211014
+cd knowledges/
+#1780211040
+cp -r 25_summer_research/ ../../docs/
+#1780218499
+pwd
+#1780218499
+..
+#1780218503
+zk e
+#1780535745
+cd dev
+#1780535751
+cd pc-app/
+#1780536296
+lsof -p <mvのPID>
+#1780536302
+iostat -x 1
+#1780536368
+l
+#1780536374
+cd /mnt/c/Users/kojda/OneDrive/Desktop/
+#1780536376
+df dev /home/dkojima/
+#1780536398
+lsof -p 3266
+#1780536463
+watch -n 10 'du -sh /home/dkojima/dev 2>/dev/null'
+#1780536644
+ps aux | grep mv
+#1780536670
+ls /mnt/c/Users/kojda/OneDrive/Desktop/dev/
+#1780536684
+ls /mnt/c/Users/kojda/OneDrive/Desktop/dev/pc-app/
+#1780536716
+kill -9 3266
+#1780536723
+rm -rf /home/dkojima/dev
+#1780536917
+cd
+#1780536919
+cd dev/pc-practice/
+#1780536920
+ls
+#1780536921
+claude
+#1780111802
+bind -f ~/.inputrc
+#1780111823
+clear
+#1780103206
+vim ~/.bashrc
+#1780111823
+clear
+#1780112397
+bind -f ~/.inputrc
+#1780112706
+vim ~/.vimrc
+#1780116382
+vim ~/.inputrc
+#1780125900
+man ls
+#1780125921
+man -help
+#1780125973
+vim ~/.wezterm.lua 
+#1780126502
+nivm
+#1780126504
+vim
+#1780126507
+nvim
+#1780128515
+docs
+#1780129503
+
+#1780129710
+://github.com/zk-org/zk/releases/latest/download/zk-v0.14.1-linux-amd64.tar.gz | tar -xz -C ~/.local/bin zK
+#1780129713
+curl -L https://github.com/zk-org/zk/releases/latest/download/zk-v0.14.1-linux-amd64.tar.gz | tar -xz -C ~/.local/bin zk
+#1780129861
+cd /tmp
+#1780129866
+LATEST_URL=$(curl -s https://api.github.com/repos/zk-org/zk/releases/latest | grep "browser_download_url.*linux-amd64\.tar\.gz" | cut -d '"' -f 4)
+#1780129871
+curl -sL "$LATEST_URL" -o zk.tar.gz
+#1780129887
+tar -xzf zk.tar.gz
+#1780129896
+rm zk.tar.gz
+#1780129932
+wget https://github.com/nakachan-ing/Zettelkasten-cli/releases/download/v3.0.0/zk-linux
+#1780130045
+mkdir -p ~/.local/bin
+#1780130049
+mv zk-mac /usr/local/bin/zk
+#1780130057
+mv zk ~/.local/bin/
+#1780130060
+zk
+#1780130102
+mkdir -p ~/note_workspace
+#1780130117
+zk init
+#1780131092
+cd 00_ideas/
+#1780131098
+rm *
+#1780131102
+cd 01_drafts/
+#1780131113
+cd templates/
+#1780131186
+pwdl
+#1780131260
+vim 
+#1780131515
+vim 休日も自然と早起きできる2つのポイント
+#1780131546
+zk new --title "休日も自然と早起きできる2つのポイント" 02_published/
+#1780131585
+rm -rf 体験学習支援者としてメンターに何ができるか 
+#1780131680
+zk new --title "体験学習支援者としてメンターに何ができるか" 02_published/
+#1780137407
+mv /mnt/c/Users/kojda/Downloads/2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1 .
+#1780137433
+mv 2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1/ exported_note
+#1780137735
+rm -rf exported_note/
+#1780137738
+cd 02_published/
+#1780137803
+zk ls
+#1780137805
+zk list
+#1780139013
+fzf
+#1780139025
+sudp apt install fzf
+#1780139033
+sudo apt install fzf
+#1780139231
+fzf --version
+#1780139476
+zke 
+#1780139706
+fzf | xargs rm
+#1780196433
+source ~/.bashrc
+#1780196435
+ff
+#1780197832
+mv 
+#1780197892
+mv docs/25_summer_research/ note_workspace/knowledges/
+#1780211011
+cd note_workspace/
+#1780211014
+cd knowledges/
+#1780211040
+cp -r 25_summer_research/ ../../docs/
+#1780218503
+zk e
+#1780532008
+cd dev/pc-app/
+#1780532013
+npm run dev
+#1780535490
+cd /
+#1780535497
+cd /home
+#1780535503
+..
+#1780535505
+cd -
+#1780535579
+mv -r dev /home/dkojima/
+#1780535601
+rm -dev
+#1780535603
+rm dev
+#1780535613
+mv dev /home/dkojima/
+#1780536767
+git status
+#1780536769
+git init
+#1780536781
+ll
+#1780536846
+git commit -m "first commit"
+#1780536853
+git remote add origin git@github.com:kojdai/pc-practice.git
+#1780536888
+nkdir dev
+#1780536893
+mkdir dev
+#1780536902
+git clone git@github.com:kojdai/pc-practice.git
+#1780540454
+cd /mnt/c/Users/kojda/OneDrive/Desktop/
+#1780540458
+cd pc-app/
+#1780540466
+vim .env.local 
+#1780540489
+pwd
+#1780541562
+cd
+#1780541562
+ls
+#1780541563
+cd dev
+#1780541565
+cd pc-practice/
+#1780541565
+l
+#1780541567
+git ad .
+#1780541569
+git add .
+#1780541577
+git config user.email "kojdai00@gmail.com"
+#1780541580
+git config user.name "kojdai"
+#1780541586
+git commit -m "added env"
+#1780541588
+git push origin master
+#1780218503
+zk e
+#1780567234
+cd docs/Our/260605-260606_合宿/
+#1780567234
+l
+#1780567235
+ls
+#1780567236
+claude
+#1780129710
+://github.com/zk-org/zk/releases/latest/download/zk-v0.14.1-linux-amd64.tar.gz | tar -xz -C ~/.local/bin zK
+#1780129713
+curl -L https://github.com/zk-org/zk/releases/latest/download/zk-v0.14.1-linux-amd64.tar.gz | tar -xz -C ~/.local/bin zk
+#1780129861
+cd /tmp
+#1780129866
+LATEST_URL=$(curl -s https://api.github.com/repos/zk-org/zk/releases/latest | grep "browser_download_url.*linux-amd64\.tar\.gz" | cut -d '"' -f 4)
+#1780129871
+curl -sL "$LATEST_URL" -o zk.tar.gz
+#1780129887
+tar -xzf zk.tar.gz
+#1780129896
+rm zk.tar.gz
+#1780129932
+wget https://github.com/nakachan-ing/Zettelkasten-cli/releases/download/v3.0.0/zk-linux
+#1780130045
+mkdir -p ~/.local/bin
+#1780130049
+mv zk-mac /usr/local/bin/zk
+#1780130057
+mv zk ~/.local/bin/
+#1780130060
+zk
+#1780130098
+cd
+#1780130102
+mkdir -p ~/note_workspace
+#1780130117
+zk init
+#1780131092
+cd 00_ideas/
+#1780131098
+rm *
+#1780131102
+cd 01_drafts/
+#1780131113
+cd templates/
+#1780131186
+pwdl
+#1780131260
+vim 
+#1780131515
+vim 休日も自然と早起きできる2つのポイント
+#1780131546
+zk new --title "休日も自然と早起きできる2つのポイント" 02_published/
+#1780131585
+rm -rf 体験学習支援者としてメンターに何ができるか 
+#1780131680
+zk new --title "体験学習支援者としてメンターに何ができるか" 02_published/
+#1780137407
+mv /mnt/c/Users/kojda/Downloads/2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1 .
+#1780137433
+mv 2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1/ exported_note
+#1780137735
+rm -rf exported_note/
+#1780137738
+cd 02_published/
+#1780137803
+zk ls
+#1780137805
+zk list
+#1780139013
+fzf
+#1780139025
+sudp apt install fzf
+#1780139033
+sudo apt install fzf
+#1780139231
+fzf --version
+#1780139476
+zke 
+#1780139706
+fzf | xargs rm
+#1780196433
+source ~/.bashrc
+#1780197832
+mv 
+#1780197892
+mv docs/25_summer_research/ note_workspace/knowledges/
+#1780197895
+cd -
+#1780211011
+cd note_workspace/
+#1780211014
+cd knowledges/
+#1780211040
+cp -r 25_summer_research/ ../../docs/
+#1780218499
+pwd
+#1780218503
+zk e
+#1780567172
+cd docs
+#1780567200
+mkdir Our
+#1780567201
+cd Our/
+#1780567216
+mkdir 260605-260606_合宿
+#1780567217
+cd 260605-260606_合宿/
+#1780567283
+vim draft.md
+#1780567401
+vim work.tex
+#1780568005
+vim reflection.tex
+#1780568123
+ff
+#1780568132
+rm -rf reflection.tex 
+#1780568139
+vim pc.tex
+#1780573872
+cd out
+#1780575127
+vim work.tex 
+#1780575613
+latexmk work.tex 
+#1780577016
+open work.pdf
+#1780577031
+vim timetable.tex 
+#1780577043
+latexmk timetable.tex 
+#1780577051
+ls
+#1780577056
+open timetable.pdf
+#1780577125
+..
+#1780577136
+vim pc.tex 
+#1780577156
+latexmk pc.tex 
+#1780577168
+out
+#1780577169
+l
+#1780577172
+open pc.pdf
+#1780218503
+zk e
+#1780572303
+
+#1780572872
+claude
+#1780579479
+ls
+#1780700558
+cd docs/Our/
+#1780700560
+cd 260605-260606_合宿/
+#1780700561
+l
+#1780700568
+vim work.tex 
+#1780131260
+vim 
+#1780131515
+vim 休日も自然と早起きできる2つのポイント
+#1780131546
+zk new --title "休日も自然と早起きできる2つのポイント" 02_published/
+#1780131585
+rm -rf 体験学習支援者としてメンターに何ができるか 
+#1780131680
+zk new --title "体験学習支援者としてメンターに何ができるか" 02_published/
+#1780137407
+mv /mnt/c/Users/kojda/Downloads/2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1 .
+#1780137433
+mv 2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1/ exported_note
+#1780137735
+rm -rf exported_note/
+#1780137738
+cd 02_published/
+#1780137803
+zk ls
+#1780137805
+zk list
+#1780139013
+fzf
+#1780139025
+sudp apt install fzf
+#1780139033
+sudo apt install fzf
+#1780139231
+fzf --version
+#1780139476
+zke 
+#1780139706
+fzf | xargs rm
+#1780196433
+source ~/.bashrc
+#1780197832
+mv 
+#1780197892
+mv docs/25_summer_research/ note_workspace/knowledges/
+#1780197895
+cd -
+#1780211011
+cd note_workspace/
+#1780211014
+cd knowledges/
+#1780211040
+cp -r 25_summer_research/ ../../docs/
+#1780218499
+pwd
+#1780218503
+zk e
+#1780567172
+cd docs
+#1780567200
+mkdir Our
+#1780567201
+cd Our/
+#1780567216
+mkdir 260605-260606_合宿
+#1780567217
+cd 260605-260606_合宿/
+#1780567283
+vim draft.md
+#1780567401
+vim work.tex
+#1780568005
+vim reflection.tex
+#1780568123
+ff
+#1780568132
+rm -rf reflection.tex 
+#1780568139
+vim pc.tex
+#1780573872
+cd out
+#1780575127
+vim work.tex 
+#1780575613
+latexmk work.tex 
+#1780577016
+open work.pdf
+#1780577031
+vim timetable.tex 
+#1780577043
+latexmk timetable.tex 
+#1780577056
+open timetable.pdf
+#1780577136
+vim pc.tex 
+#1780577156
+latexmk pc.tex 
+#1780577168
+out
+#1780577172
+open pc.pdf
+#1780218503
+zk e
+#1780572872
+claude
+#1780579490
+cd dev
+#1780581516
+vim .env.local 
+#1780615398
+git config user.email "210447037@ccmailg.meijo-u.ac.jp"
+#1780615403
+git push
+#1780615418
+git commit -m "added open sesami"
+#1780649795
+vim Cla
+#1780661046
+cd schein-2002/
+#1780662784
+mv /mnt/c/Users/kojda/Downloads/プロセス* .
+#1780664293
+vim schein-2002/
+#1780702391
+
+#1780705304
+npm run dev
+#1780707620
+git add .
+#1780707639
+git commit -m "revised orientation"
+#1780707643
+git push origin master
+#1780707672
+cd src
+#1780707676
+cd components/
+#1780707681
+vim App.tsx 
+#1780707730
+vim Tutorial.tsx 
+#1780707757
+.
+#1780711474
+
+#1780711490
+vim plan.md
+#1780780167
+mkdir Korthagen
+#1780780170
+cd Korthagen/
+#1780780181
+vim power_of_reflection
+#1780780192
+mv power_of_reflection power_of_reflection.md
+#1780780211
+mkdir knowledge
+#1780780216
+mv schein-2002/ knowledge/
+#1780780220
+mv Korthagen/ knowledge/
+#1780780225
+mv plan.md knowledge/
+#1780781441
+
+#1780781451
+cd knowledge/
+#1780781456
+vim plan.md 
+#1780826359
+..
+#1780826359
+l
+#1780826362
+vim CLAUDE.md 
+#1780826670
+ls
+#1780579479
+ls
+#1780579500
+cd dev/pc-practice/
+#1780579500
+l
+#1780579502
+claude
+#1780707586
+claude --resume eeb03746-3431-4745-87ae-91fcd2c8ff83
+#1780131585
+rm -rf 体験学習支援者としてメンターに何ができるか 
+#1780131680
+zk new --title "体験学習支援者としてメンターに何ができるか" 02_published/
+#1780137407
+mv /mnt/c/Users/kojda/Downloads/2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1 .
+#1780137433
+mv 2f10487dc078e470c89c24e7d1f90bff4a3083b807f394c0d0433c937a9da6d4_1/ exported_note
+#1780137735
+rm -rf exported_note/
+#1780137738
+cd 02_published/
+#1780137803
+zk ls
+#1780137805
+zk list
+#1780139013
+fzf
+#1780139025
+sudp apt install fzf
+#1780139033
+sudo apt install fzf
+#1780139231
+fzf --version
+#1780139476
+zke 
+#1780139706
+fzf | xargs rm
+#1780196433
+source ~/.bashrc
+#1780197832
+mv 
+#1780197892
+mv docs/25_summer_research/ note_workspace/knowledges/
+#1780197895
+cd -
+#1780211011
+cd note_workspace/
+#1780211014
+cd knowledges/
+#1780211040
+cp -r 25_summer_research/ ../../docs/
+#1780218499
+pwd
+#1780218503
+zk e
+#1780567200
+mkdir Our
+#1780567201
+cd Our/
+#1780567216
+mkdir 260605-260606_合宿
+#1780567283
+vim draft.md
+#1780567401
+vim work.tex
+#1780568005
+vim reflection.tex
+#1780568132
+rm -rf reflection.tex 
+#1780568139
+vim pc.tex
+#1780577136
+vim pc.tex 
+#1780218503
+zk e
+#1780699307
+cd docs
+#1780699309
+cd out
+#1780699311
+cd Our
+#1780699313
+cd 260605-260606_合宿/
+#1780700111
+ff
+#1780700274
+vim timetable.tex 
+#1780700968
+latexmk *tex
+#1780701005
+claude
+#1780701658
+latexmk pc.tex 
+#1780701709
+latexmk timetable.tex 
+#1780701734
+open pc.pdf
+#1780701739
+open timetable.pdf
+#1780702014
+open work.
+#1780702265
+ls
+#1780702266
+l
+#1780702280
+..
+#1780702280
+vim work.tex 
+#1780702420
+latexmk work.tex 
+#1780702434
+out
+#1780702436
+open work.pdf
+#1780874353
+vim
+#1780702436
+open work.pdf
+#1780921704
+ls
+#1780921706
+cd dev
+#1780921708
+cd test/
+#1780921708
+l
+#1780921712
+open index.html 
+#1780921750
+vim index.html 
+#1780922930
+vim
+#1780702420
+latexmk work.tex 
+#1780702434
+out
+#1780702436
+open work.pdf
+#1780874353
+vim
+#1780921432
+ls
+#1780921435
+cd dev
+#1780921438
+mkdir test
+#1780921439
+cd test/
+#1780921440
+l
+#1780921442
+calaude
+#1780921446
+claude
+#1780921442
+calaude
+#1780976636
+cd dev/pc-practice/
+#1780976636
+l
+#1780976637
+claude
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780921446
+claude
+#1780976598
+vim ~/.wezterm.lua 
+#1780976617
+cd dev
+#1780976624
+ls
+#1780976628
+cd pc-practice/
+#1780976628
+l
+#1780998877
+claude
+#1780999946
+ls
+#1780976628
+l
+#1780997981
+ls
+#1780998056
+(INS) $ claude
+#1780998056
+claude: command not found
+#1780998063
+npm install -g @anthropic-ai/claude-code
+#1780998071
+claude
+#1781047064
+ls
+#1781047068
+cd dev/helping/
+#1781047068
+l
+#1781047070
+claude
+#1781091077
+zi
+#1781090978
+zi
+#1781091030
+zl
+#1780567216
+mkdir 260605-260606_合宿
+#1780567283
+vim draft.md
+#1780567401
+vim work.tex
+#1780568005
+vim reflection.tex
+#1780568132
+rm -rf reflection.tex 
+#1780568139
+vim pc.tex
+#1780577136
+vim pc.tex 
+#1780218503
+zk e
+#1780699307
+cd docs
+#1780699309
+cd out
+#1780699311
+cd Our
+#1780699313
+cd 260605-260606_合宿/
+#1780700274
+vim timetable.tex 
+#1780700968
+latexmk *tex
+#1780701005
+claude
+#1780701658
+latexmk pc.tex 
+#1780701709
+latexmk timetable.tex 
+#1780701734
+open pc.pdf
+#1780701739
+open timetable.pdf
+#1780702014
+open work.
+#1780702280
+vim work.tex 
+#1780702420
+latexmk work.tex 
+#1780702434
+out
+#1780702436
+open work.pdf
+#1780702436
+open work.pdf
+#1780921706
+cd dev
+#1780921708
+cd test/
+#1780921712
+open index.html 
+#1780921750
+vim index.html 
+#1780702420
+latexmk work.tex 
+#1780702434
+out
+#1780702436
+open work.pdf
+#1780921435
+cd dev
+#1780921438
+mkdir test
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780921446
+claude
+#1780921442
+calaude
+#1780976636
+cd dev/pc-practice/
+#1780976637
+claude
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780921446
+claude
+#1780976598
+vim ~/.wezterm.lua 
+#1780976617
+cd dev
+#1780976628
+cd pc-practice/
+#1780998877
+claude
+#1780998056
+(INS) $ claude
+#1780998056
+claude: command not found
+#1780998063
+npm install -g @anthropic-ai/claude-code
+#1780998071
+claude
+#1781047068
+cd dev/helping/
+#1781047070
+claude
+#1781091077
+zi
+#1781090978
+zi
+#1781091030
+zl
+#1781094433
+zd
+#1781094812
+mv /mnt/c/Users/kojda/OneDrive/Desktop/Private_Database* .
+#1781097254
+cd project
+#1781097276
+cd meta
+#1781097786
+source ~/.bashrc
+#1781097868
+zo
+#1781098599
+git clone git@github.com:kojdai/Graduate_research.git
+#1781098827
+vim
+#1781098872
+mv 20歳の自分へ 20歳の自分へ .md
+#1781098878
+mv 20歳の自分へ 20歳の自分へ.md
+#1781098960
+mv 20歳の自分へ.md zkNote/meta/
+#1781099475
+ll
+#1781130697
+rm Pri*
+#1781130705
+ls
+#1781130710
+rm mitemo
+#1781130721
+rm -rf Graduate_research/
+#1781130733
+cd inbox/
+#1781130736
+cd journal/
+#1781130772
+vim daily-index-2024.md 
+#1781130793
+cd permanent/
+#1781130801
+ff
+#1781130806
+cd readinglist/
+#1781130810
+zf
+#1781130832
+cd moc/
+#1781130839
+vim ビジネス.md 
+#1781130849
+..
+#1781130858
+cd
+#1781131098
+nvim
+#1781131321
+cd zkNote/
+#1781131325
+vim readme.md
+#1781132422
+cd meta/
+#1781132423
+l
+#1781132424
+vim persona.md 
+#1781134891
+claude
+#1781132422
+cd meta/
+#1781132424
+vim persona.md 
+#1781134891
+claude
+#1781176136
+ls
+#1781176140
+cd dev
+#1781176141
+cd helping/
+#1781176143
+cd knowledge/
+#1781176145
+cd Korthagen/
+#1781176145
+l
+#1781176147
+vim power_of_reflection.md 
+#1781176140
+cd dev
+#1781176141
+cd helping/
+#1781176143
+cd knowledge/
+#1781176145
+cd Korthagen/
+#1781176147
+vim power_of_reflection.md 
+#1781177039
+zf
+#1781177169
+cd zkNote/
+#1781177172
+cd permanent/
+#1781177174
+..
+#1781177175
+cd lit/
+#1781177177
+cd knowledges/
+#1781177177
+l
+#1781177185
+vim k0237.md 
+#1781132424
+vim persona.md 
+#1781134891
+claude
+#1781176143
+cd knowledge/
+#1781176145
+cd Korthagen/
+#1781176147
+vim power_of_reflection.md 
+#1781176143
+cd knowledge/
+#1781176145
+cd Korthagen/
+#1781176147
+vim power_of_reflection.md 
+#1781177169
+cd zkNote/
+#1781177172
+cd permanent/
+#1781177175
+cd lit/
+#1781177177
+cd knowledges/
+#1781177185
+vim k0237.md 
+#1781267060
+cd dev
+#1781267062
+cd helping/
+#1781268817
+ff
+#1781268867
+..
+#1781268873
+vim plan.md 
+#1781268984
+zf
+#1781269032
+cd note
+#1781269034
+vim 01-rinen-negai.md 
+#1781270812
+jls
+#1781270830
+cd
+#1781270830
+ls
+#1781270832
+cd docs
+#1781270834
+cd pc_review/
+#1781270834
+l
+#1781177169
+cd zkNote/
+#1781177172
+cd permanent/
+#1781177174
+..
+#1781177175
+cd lit/
+#1781177177
+cd knowledges/
+#1781177185
+vim k0237.md 
+#1781268839
+cd dev
+#1781268845
+cd helping/
+#1781268845
+ls
+#1781324186
+claude
+#1781324198
+l
+#1781324200
+git add .
+#1781324211
+git commit -m "added note"
+#1781324217
+git push origin master
+#1781328191
+update
+#1780701658
+latexmk pc.tex 
+#1780701709
+latexmk timetable.tex 
+#1780701734
+open pc.pdf
+#1780701739
+open timetable.pdf
+#1780702014
+open work.
+#1780702280
+vim work.tex 
+#1780702420
+latexmk work.tex 
+#1780702436
+open work.pdf
+#1780702436
+open work.pdf
+#1780921706
+cd dev
+#1780921708
+cd test/
+#1780921712
+open index.html 
+#1780921750
+vim index.html 
+#1780702420
+latexmk work.tex 
+#1780702436
+open work.pdf
+#1780921435
+cd dev
+#1780921438
+mkdir test
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780921442
+calaude
+#1780976636
+cd dev/pc-practice/
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780976598
+vim ~/.wezterm.lua 
+#1780976617
+cd dev
+#1780976628
+cd pc-practice/
+#1780998056
+(INS) $ claude
+#1780998056
+claude: command not found
+#1780998063
+npm install -g @anthropic-ai/claude-code
+#1781047068
+cd dev/helping/
+#1781132107
+zi
+#1781132115
+zj
+#1781132192
+zf mocs
+#1781132256
+zl
+#1781132266
+zp
+#1781132334
+gd
+#1781132407
+zk mocs
+#1781134654
+mv /mnt/c/Users/kojda/Downloads/5409f337-612a-4c28-8a26-4692b8bc712f_ExportBlock-7cc86c34-e453-48a1-983f-7568e6285d53 .
+#1781134673
+mv /mnt/c/Users/kojda/Downloads/5409f337-612a-4c28-8a26-4692b8bc712f_ExportBlock-7cc86c34-e453-48a1-983f-7568e6285d53.zip .
+#1781134919
+mv /mnt/c/Users/kojda/Downloads/336d026a-6a00-45e6-a37d-f8356502d55b_ExportBlock-a80b79a0-5477-452c-bff0-bbe5d5aea867.zip .
+#1781162636
+vim
+#1781174618
+rm 5409f337-612a-4c28-8a26-4692b8bc712f_ExportBlock-7cc86c34-e453-48a1-983f-7568e6285d53/
+#1781174629
+rm -r 5409f337-612a-4c28-8a26-4692b8bc712f_ExportBlock-7cc86c34-e453-48a1-983f-7568e6285d53/
+#1781174633
+Y
+#1781174829
+zf
+#1781176868
+mkdir korthagen
+#1781176869
+cd korthagen/
+#1781176876
+vim S1-S4.tex
+#1781177644
+cd schein-2002/
+#1781177661
+cp -r pp.41-56/ ../korthagen/
+#1781177664
+cd ../korthagen/
+#1781178327
+rm -rf pp.41-56/
+#1781178343
+..
+#1781178344
+i
+#1781178346
+vim S1-S4.tex 
+#1781178491
+latexmk S1-S4.tex 
+#1781178540
+out
+#1781178542
+pdf
+#1781232895
+cd
+#1781232897
+cd docs
+#1781232904
+cd pc_review/
+#1781232906
+vim pc_scoping_review.
+#1781232916
+vim pc_scoping_review.tex
+#1781235988
+ls
+#1781235993
+rm pc_scoping_review.pdf
+#1781236001
+mv pc_scoping_review.tex pc_review.tex
+#1781236005
+l
+#1781236020
+claude
+#1780921708
+cd test/
+#1780921712
+open index.html 
+#1780921750
+vim index.html 
+#1780922930
+vim
+#1780702420
+latexmk work.tex 
+#1780702436
+open work.pdf
+#1780874353
+vim
+#1780921435
+cd dev
+#1780921438
+mkdir test
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780921442
+calaude
+#1780976636
+cd dev/pc-practice/
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780976598
+vim ~/.wezterm.lua 
+#1780976617
+cd dev
+#1780976628
+cd pc-practice/
+#1780998056
+(INS) $ claude
+#1780998056
+claude: command not found
+#1780998063
+npm install -g @anthropic-ai/claude-code
+#1781081834
+zk
+#1781081862
+vim ~/.bashrc
+#1781081995
+source ~/.bashrc
+#1781081997
+zn
+#1781089736
+zf
+#1781089761
+claude
+#1781236016
+cd docs/pc_review/
+#1781236418
+ff
+#1781236458
+j
+#1781236487
+rm pc_review.bbl
+#1781236491
+rm pc_review.pdf
+#1781236496
+latexmk pc_review.tex
+#1781270866
+
+#1781270872
+vim pc_review.
+#1781270876
+vim pc_review.tex
+#1781270888
+out
+#1781270927
+ls
+#1781270930
+pdf
+#1781276131
+..
+#1781276134
+cd
+#1781276139
+cd dev/helping/
+#1781276143
+cd docs
+#1781276144
+cd note
+#1781276145
+l
+#1781276146
+vim 01-rinen-negai.md 
+#1781270872
+vim pc_review.
+#1781270876
+vim pc_review.tex
+#1781270888
+out
+#1781270930
+pdf
+#1781276139
+cd dev/helping/
+#1781276143
+cd docs
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781407921
+
+#1781409434
+wezterm -v
+#1781409450
+whare wezterm
+#1781409464
+which wezterm
+#1781409839
+
+#1781409863
+vim ~/.bashrc
+#1781409870
+
+#1781410003
+:q
+#1781410004
+..
+#1781410004
+l
+#1781410085
+ff
+#1781411492
+vim
+#1781417025
+help cd
+#1781417053
+help ls
+#1781417056
+man ls
+#1781417092
+claude
+#1781417411
+vim /mnt/c/Users/kojda/.config/
+#1781417421
+cd /mnt/c/Users/kojda/.config/
+#1781417422
+ls
+#1781417424
+ll
+#1781417427
+cd
+#1781417763
+pw
+#1781417764
+pwd
+#1781417768
+vim ~/.wezterm.lua 
+#1781276146
+vim 01-rinen-negai.md 
+#1781411816
+f
+#1781411817
+ff
+#1781413945
+vim
+#1781413969
+
+#1781415901
+ls
+#1781415903
+ll
+#1781415919
+pwd
+#1781418490
+vim ~/.wezterm.lua 
+#1781420470
+vim ~/.vimrc
+#1781420515
+l
+#1781178346
+vim S1-S4.tex 
+#1781178491
+latexmk S1-S4.tex 
+#1781178540
+out
+#1781178542
+pdf
+#1781232895
+cd
+#1781232904
+cd pc_review/
+#1781232906
+vim pc_scoping_review.
+#1781232916
+vim pc_scoping_review.tex
+#1781235993
+rm pc_scoping_review.pdf
+#1781236001
+mv pc_scoping_review.tex pc_review.tex
+#1780921708
+cd test/
+#1780921712
+open index.html 
+#1780921750
+vim index.html 
+#1780922930
+vim
+#1780702420
+latexmk work.tex 
+#1780702436
+open work.pdf
+#1780874353
+vim
+#1780921438
+mkdir test
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780921442
+calaude
+#1780976636
+cd dev/pc-practice/
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780976598
+vim ~/.wezterm.lua 
+#1780976628
+cd pc-practice/
+#1780998056
+(INS) $ claude
+#1780998056
+claude: command not found
+#1780998063
+npm install -g @anthropic-ai/claude-code
+#1781081834
+zk
+#1781081862
+vim ~/.bashrc
+#1781081995
+source ~/.bashrc
+#1781081997
+zn
+#1781089736
+zf
+#1781236016
+cd docs/pc_review/
+#1781236418
+ff
+#1781236458
+j
+#1781236487
+rm pc_review.bbl
+#1781236491
+rm pc_review.pdf
+#1781236496
+latexmk pc_review.tex
+#1781270872
+vim pc_review.
+#1781270876
+vim pc_review.tex
+#1781270888
+out
+#1781270930
+pdf
+#1781276134
+cd
+#1781276139
+cd dev/helping/
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781340118
+cd helping/
+#1781340123
+vim tasks.md 
+#1781340132
+cd dev/
+#1781340139
+vim CLAUDE.md 
+#1781340160
+cd specs/
+#1781340162
+vim implementation-spec.md 
+#1781355195
+cd dev
+#1781355223
+cd src
+#1781355227
+cd li
+#1781355229
+cd lib
+#1781355231
+cd cases/
+#1781355261
+vim case-01.ts 
+#1781355371
+cat README.md 
+#1781398388
+ls
+#1781398390
+vim README.md 
+#1781398478
+vim case-02.ts 
+#1781398890
+ll
+#1781398896
+cd docs
+#1781398902
+mkdir document
+#1781398915
+mv /mnt/c/Users/kojda/Downloads/0000003_お名前.comドメイン登録規約_20250101.pdf document/
+#1781398960
+cd document/
+#1781398976
+vim helping.jp.md
+#1781400598
+..
+#1781400598
+l
+#1781401206
+claude
+#1781276134
+cd
+#1781276139
+cd dev/helping/
+#1781276143
+cd docs
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781328698
+cd zkNote/
+#1781328700
+..
+#1781339983
+vim
+#1781339995
+ls
+#1781340006
+cd dev
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340010
+l
+#1781340066
+claude
+#1781340006
+cd dev
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340066
+claude
+#1781495762
+ls
+#1781495775
+mv /mnt/c/Users/kojda/Downloads/004.pdf .
+#1781495788
+mv 004.pdf docs/pc_review/
+#1781495790
+cd pc
+#1781495796
+cd docs/pc_review/
+#1781495811
+mkdir papers
+#1781495817
+mv 004.pdf papers/
+#1781495818
+cd papers/
+#1781495830
+mv 004.pdf 経営⼒再構築伴⾛⽀援の推進について.pdf
+#1781495832
+..
+#1781495832
+l
+#1781236458
+j
+#1781236487
+rm pc_review.bbl
+#1781236491
+rm pc_review.pdf
+#1781276139
+cd dev/helping/
+#1781276143
+cd docs
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781276139
+cd dev/helping/
+#1781276143
+cd docs
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781409434
+wezterm -v
+#1781409450
+whare wezterm
+#1781409464
+which wezterm
+#1781409863
+vim ~/.bashrc
+#1781410003
+:q
+#1781410085
+ff
+#1781417025
+help cd
+#1781417053
+help ls
+#1781417056
+man ls
+#1781417092
+claude
+#1781417411
+vim /mnt/c/Users/kojda/.config/
+#1781417421
+cd /mnt/c/Users/kojda/.config/
+#1781417763
+pw
+#1781417764
+pwd
+#1781417768
+vim ~/.wezterm.lua 
+#1781276146
+vim 01-rinen-negai.md 
+#1781411816
+f
+#1781411817
+ff
+#1781415919
+pwd
+#1781418490
+vim ~/.wezterm.lua 
+#1781420470
+vim ~/.vimrc
+#1781178346
+vim S1-S4.tex 
+#1781178491
+latexmk S1-S4.tex 
+#1781232906
+vim pc_scoping_review.
+#1781232916
+vim pc_scoping_review.tex
+#1781235993
+rm pc_scoping_review.pdf
+#1781236001
+mv pc_scoping_review.tex pc_review.tex
+#1780921708
+cd test/
+#1780921712
+open index.html 
+#1780921750
+vim index.html 
+#1780702420
+latexmk work.tex 
+#1780702436
+open work.pdf
+#1780921438
+mkdir test
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780921442
+calaude
+#1780976636
+cd dev/pc-practice/
+#1780921439
+cd test/
+#1780921442
+calaude
+#1780976598
+vim ~/.wezterm.lua 
+#1780976628
+cd pc-practice/
+#1780998056
+(INS) $ claude
+#1780998056
+claude: command not found
+#1780998063
+npm install -g @anthropic-ai/claude-code
+#1781081834
+zk
+#1781081862
+vim ~/.bashrc
+#1781081995
+source ~/.bashrc
+#1781081997
+zn
+#1781089736
+zf
+#1781236418
+ff
+#1781236458
+j
+#1781236487
+rm pc_review.bbl
+#1781236491
+rm pc_review.pdf
+#1781276139
+cd dev/helping/
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781340123
+vim tasks.md 
+#1781340132
+cd dev/
+#1781340139
+vim CLAUDE.md 
+#1781340160
+cd specs/
+#1781340162
+vim implementation-spec.md 
+#1781355223
+cd src
+#1781355227
+cd li
+#1781355229
+cd lib
+#1781355231
+cd cases/
+#1781355261
+vim case-01.ts 
+#1781355371
+cat README.md 
+#1781398390
+vim README.md 
+#1781398478
+vim case-02.ts 
+#1781398896
+cd docs
+#1781398902
+mkdir document
+#1781398915
+mv /mnt/c/Users/kojda/Downloads/0000003_お名前.comドメイン登録規約_20250101.pdf document/
+#1781398960
+cd document/
+#1781398976
+vim helping.jp.md
+#1781401206
+claude
+#1781276139
+cd dev/helping/
+#1781276143
+cd docs
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781328698
+cd zkNote/
+#1781340008
+cd he
+#1781340066
+claude
+#1781495133
+cd docs/pc_review/
+#1781495151
+vim pc_review.
+#1781496812
+latexmk pc_review.tex
+#1781506679
+mv /mnt/c/Users/kojda/Downloads/ナラティブレビューの概要：考え方，書き方，評価ツール.pdf  .
+#1781508071
+vim pc_review.tex
+#1781508082
+mv pc_review.tex main.tex
+#1781508200
+mv pc_review.bib bib.bib
+#1781509166
+git clone git@github.com:rsdlab/BThesis_Kojima.git
+#1781509718
+rm -rf BThesis_Kojima/
+#1781509723
+rm -rf out
+#1781509726
+latexmk main.tex 
+#1781521175
+out
+#1781521175
+pdf
+#1781526208
+ll
+#1781527044
+git commit -m "added pc_review"
+#1781527046
+git push origin master
+#1781527052
+git branch
+#1781527058
+.
+#1781527065
+git add .
+#1781527082
+git commit -m "added some changes"
+#1781527087
+git push origin main
+#1781527098
+cd pc_review/
+#1781527649
+vim intro.tex 
+#1781527746
+vim method.tex 
+#1781527934
+vim ma
+#1781527960
+vim sec/intro.tex 
+#1781528012
+vim main.tex 
+#1781528367
+cd sec
+#1781528381
+rm 
+#1781528382
+rm *
+#1781529336
+ls
+#1781529338
+cd papers/
+#1781529350
+mv /mnt/c/Users/kojda/Downloads/RAMESES\ publication\ standards.pdf .
+#1781529351
+la
+#1781529369
+mv /mnt/c/Users/kojda/Downloads/Protocol\ -\ realist\ and\ meta-narrative\ evidence.pdf .
+#1781529400
+vim
+#1781529533
+..
+#1781529538
+cd
+#1781529578
+cd dev
+#1781529580
+cd hel
+#1781529582
+cd helping/
+#1781529584
+cd knowledge/
+#1781529587
+cd schein-2002/
+#1781529619
+exe
+#1781529622
+open
+#1781529763
+cp プロセス・コンサルタントの学習をいかに促進するか.pdf ../../../../docs/pc_review/papers/
+#1781529766
+l
+#1781529772
+cp プロセス・コンサルタントの学習をいかに促進するか.pdf ../../../../docs/pc_review/papers/
+#1781529824
+cp プロセス・コンサルテーションとの出会いによる支援関係の認識と実践の変化.pdf ../../../../docs/pc_review/papers/
+#1781529833
+cp プロセス・コンサルテーションとの出会いによる支援関係の認識と実践の変化.pdf ../../../../docs/pc_review/papers/
+#1781529865
+cp プロセス・コンサルテーションの生成局面に関する一考察.pdf ../../../../docs/pc_review/papers/
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340066
+claude
+#1781495775
+mv /mnt/c/Users/kojda/Downloads/004.pdf .
+#1781495788
+mv 004.pdf docs/pc_review/
+#1781495790
+cd pc
+#1781495811
+mkdir papers
+#1781495817
+mv 004.pdf papers/
+#1781495830
+mv 004.pdf 経営⼒再構築伴⾛⽀援の推進について.pdf
+#1781558059
+cd docs/pc_review/
+#1781558084
+mv /mnt/c/Users/kojda/Downloads/*.pdf .
+#1781558495
+ls -1 | wx -l
+#1781558502
+ls -1 | wc -l
+#1781559112
+ls | wc -1
+#1781559120
+ls | wc
+#1781559136
+ls
+#1781559140
+cd papers/
+#1781559146
+ls | wc -l
+#1781559739
+j
+#1781559741
+..
+#1781559741
+l
+#1781559743
+vim bib.bib 
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781328698
+cd zkNote/
+#1781339983
+vim
+#1781340006
+cd dev
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340066
+claude
+#1781340006
+cd dev
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340066
+claude
+#1781495775
+mv /mnt/c/Users/kojda/Downloads/004.pdf .
+#1781495788
+mv 004.pdf docs/pc_review/
+#1781495790
+cd pc
+#1781495796
+cd docs/pc_review/
+#1781495811
+mkdir papers
+#1781495817
+mv 004.pdf papers/
+#1781495830
+mv 004.pdf 経営⼒再構築伴⾛⽀援の推進について.pdf
+#1781529802
+cd docs
+#1781529804
+cd pc_review/
+#1781529806
+cd papers/
+#1781530815
+pwd
+#1781530834
+mv /mnt/c/Users/kojda/Downloads/*pdf .
+#1781557611
+ff
+#1781562868
+out
+#1781562869
+pdf
+#1781563033
+ls
+#1781563034
+llss
+#1781563038
+..
+#1781563523
+cd sec
+#1781563523
+l
+#1781563525
+vim method.tex 
+#1781340009
+cd helping/
+#1781495142
+cd docs/pc_review/
+#1781495142
+l
+#1781495654
+ls
+#1781495656
+vim pc_review.bib 
+#1781495752
+claude
+#1781438427
+ls
+#1781438432
+cd dev/helping/
+#1781438432
+l
+#1781438434
+claude
+#1781355371
+cat README.md 
+#1781398390
+vim README.md 
+#1781398478
+vim case-02.ts 
+#1781398896
+cd docs
+#1781398902
+mkdir document
+#1781398915
+mv /mnt/c/Users/kojda/Downloads/0000003_お名前.comドメイン登録規約_20250101.pdf document/
+#1781398960
+cd document/
+#1781398976
+vim helping.jp.md
+#1781401206
+claude
+#1781276134
+cd
+#1781276143
+cd docs
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781328698
+cd zkNote/
+#1781339983
+vim
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340066
+claude
+#1781438205
+cd dev/helping/
+#1781438236
+cd dev
+#1781438239
+cd src
+#1781438241
+cd app/
+#1781438248
+cd dashboard/
+#1781438257
+vim page.tsx 
+#1781438383
+vim layout.tsx 
+#1781438397
+vim globals.css 
+#1781438400
+vim favicon.ico 
+#1781438406
+cd api/
+#1781438418
+ll
+#1781438420
+..
+#1781438493
+ls
+#1781438497
+cd src/components/
+#1781438498
+vim App.tsx 
+#1781439395
+l
+#1781439397
+vim Toast.tsx 
+#1781439406
+vim Tutorial.tsx 
+#1781439421
+vim appStyles.ts 
+#1781439425
+:w
+#1781438400
+vim favicon.ico 
+#1781438406
+cd api/
+#1781438420
+..
+#1781438497
+cd src/components/
+#1781438498
+vim App.tsx 
+#1781439397
+vim Toast.tsx 
+#1781439406
+vim Tutorial.tsx 
+#1781439421
+vim appStyles.ts 
+#1781439425
+:w
+#1781862057
+update
+#1781862558
+ll
+#1781862574
+vim .claude/:q
+#1781864978
+nvim
+#1781864982
+l
+#1781865962
+jzf
+#1781866270
+zn
+#1781866274
+zf
+#1781874956
+source ~/.bashrc
+#1781874960
+ld
+#1781874961
+ls
+#1781874997
+ut
+#1781862094
+claude
+#1781439425
+:w
+#1781869026
+ls
+#1781869028
+zf
+#1781869032
+nvim
+#1781869053
+cd docs/pc_review/
+#1781869054
+l
+#1781869056
+out
+#1781869057
+pdf
+#1781439421
+vim appStyles.ts 
+#1781439425
+:w
+#1781862057
+update
+#1781862558
+ll
+#1781862574
+vim .claude/:q
+#1781864978
+nvim
+#1781865962
+jzf
+#1781866270
+zn
+#1781866274
+zf
+#1781874960
+ld
+#1781874997
+ut
+#1781862094
+claude
+#1781439425
+:w
+#1781869028
+zf
+#1781869032
+nvim
+#1781869053
+cd docs/pc_review/
+#1781869056
+out
+#1781869057
+pdf
+#1781875510
+cd
+#1781885759
+cd zkNote/
+#1781885761
+..
+#1781885761
+l
+#1781886222
+source ~/.bashrc
+#1781886225
+ls
+#1781875027
+claude
+#1781885761
+l
+#1781887683
+zn
+#1781931205
+zf
+#1781932466
+claude
+#1781933966
+source ~/.bashrc
+#1781933973
+ls
+#1781339983
+vim
+#1781340006
+cd dev
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340066
+claude
+#1781340006
+cd dev
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340066
+claude
+#1781495775
+mv /mnt/c/Users/kojda/Downloads/004.pdf .
+#1781495788
+mv 004.pdf docs/pc_review/
+#1781495790
+cd pc
+#1781495796
+cd docs/pc_review/
+#1781495811
+mkdir papers
+#1781495817
+mv 004.pdf papers/
+#1781495830
+mv 004.pdf 経営⼒再構築伴⾛⽀援の推進について.pdf
+#1781529804
+cd pc_review/
+#1781529806
+cd papers/
+#1781530815
+pwd
+#1781530834
+mv /mnt/c/Users/kojda/Downloads/*pdf .
+#1781563034
+llss
+#1781563523
+cd sec
+#1781563525
+vim method.tex 
+#1781340009
+cd helping/
+#1781495142
+cd docs/pc_review/
+#1781495656
+vim pc_review.bib 
+#1781495752
+claude
+#1781438434
+claude
+#1781355371
+cat README.md 
+#1781398390
+vim README.md 
+#1781398478
+vim case-02.ts 
+#1781398902
+mkdir document
+#1781398915
+mv /mnt/c/Users/kojda/Downloads/0000003_お名前.comドメイン登録規約_20250101.pdf document/
+#1781398976
+vim helping.jp.md
+#1781401206
+claude
+#1781276134
+cd
+#1781276144
+cd note
+#1781276146
+vim 01-rinen-negai.md 
+#1781328698
+cd zkNote/
+#1781339983
+vim
+#1781340008
+cd he
+#1781340009
+cd helping/
+#1781340066
+claude
+#1781438236
+cd dev
+#1781438239
+cd src
+#1781438241
+cd app/
+#1781438248
+cd dashboard/
+#1781438257
+vim page.tsx 
+#1781438383
+vim layout.tsx 
+#1781438397
+vim globals.css 
+#1781438400
+vim favicon.ico 
+#1781438406
+cd api/
+#1781438497
+cd src/components/
+#1781438498
+vim App.tsx 
+#1781439397
+vim Toast.tsx 
+#1781439406
+vim Tutorial.tsx 
+#1781439421
+vim appStyles.ts 
+#1781439425
+:w
+#1781438400
+vim favicon.ico 
+#1781438406
+cd api/
+#1781438497
+cd src/components/
+#1781438498
+vim App.tsx 
+#1781439397
+vim Toast.tsx 
+#1781439406
+vim Tutorial.tsx 
+#1781439421
+vim appStyles.ts 
+#1781439425
+:w
+#1781862057
+update
+#1781862574
+vim .claude/:q
+#1781865962
+jzf
+#1781866270
+zn
+#1781866274
+zf
+#1781874960
+ld
+#1781874997
+ut
+#1781862094
+claude
+#1781439425
+:w
+#1781869028
+zf
+#1781869053
+cd docs/pc_review/
+#1781439421
+vim appStyles.ts 
+#1781439425
+:w
+#1781862057
+update
+#1781862574
+vim .claude/:q
+#1781865962
+jzf
+#1781866270
+zn
+#1781866274
+zf
+#1781874960
+ld
+#1781874997
+ut
+#1781862094
+claude
+#1781439425
+:w
+#1781869028
+zf
+#1781869053
+cd docs/pc_review/
+#1781875510
+cd
+#1781885759
+cd zkNote/
+#1781875027
+claude
+#1781887683
+zn
+#1781931205
+zf
+#1781932466
+claude
+#1782003463
+cd dev/helping/
+#1782003469
+cd Theory_U/
+#1782003477
+mv Theory_U/ Otto
+#1782003479
+cd Otto/
+#1782003487
+nvim Presencing.
+#1782003491
+nvim Presencing.tex
+#1782003906
+ccc
+#1782004641
+cd _markdown_
+#1782004677
+ll
+#1782004684
+cd business/
+#1782005270
+nvim lean-canvas.tex 
+#1782011074
+mv kickoff-deck.tex meetings/
+#1782011091
+mv knowledge/ docs/
+#1782011103
+mv theory-foundation.tex knowledge/
+#1782011105
+cd knowledge/
+#1782011157
+rm _markdown_wrap/
+#1782011162
+rm -r _markdown_wrap/
+#1782011169
+y
+#1782011171
+s
+#1782011172
+ls
+#1782011174
+cd community/
+#1782011178
+vim discord-design.md 
+#1782011203
+cd document/
+#1782011210
+mv market* document/
+#1782011216
+mv plan.md document/
+#1782011219
+mv tasks.md document/
+#1782011223
+mv lean-canvas.tex document/
+#1782011235
+mkdir kickoff
+#1782011241
+mv kickoff-agenda.md kickoff
+#1782011247
+mv kickoff-deck.tex kickoff
+#1782011249
+vim recurring-meetings.md 
+#1782011281
+rm -rf _markdown_*
+#1782011284
+cd docs
+#1782013217
+cd meetings/
+#1782013220
+cd kickoff/
+#1782013232
+source ~/.bashrc
+#1782013234
+vim kickoff-deck.tex 
+#1782028401
+nvim kickoff-
+#1782028410
+nvim kickoff-deck.tex 
+#1782028437
+rm -rf out
+#1782028446
+latexmk kickoff-MTG.tex 
+#1782028460
+nvim kickoff-MTG.tex 
+#1782034708
+nvim
+#1782038120
+out
+#1782038122
+pdf
+#1782043918
+cd content/
+#1782043920
+cd note/
+#1782043926
+cd strategy/
+#1782043931
+..
+#1782043936
+ff
+#1782043939
+fff
+#1782043957
+zff
+#1782044316
+cd content/note
+#1782044317
+l
+#1782044319
+nvim 02-hyoka-wo-tebanasu.md 
+#1781933966
+source ~/.bashrc
+#1781933973
+ls
+#1782003928
+cd dev/helping/
+#1782003928
+l
+#1782003936
+claude
+#1781933973
+ls
+#1782046618
+cd dev/helping/
+#1782046619
+l
+#1782046620
+claude
+#1781933973
+ls
+#1782046627
+cd dev/helping/
+#1782046640
+cd docs
+#1782046641
+l
+#1782048120
+cd docs/pc_review/
+#1782048121
+l
+#1782003928
+cd dev/helping/
+#1782048113
+cd docs/pc_review/
+#1782048114
+l
+#1782048116
+claude
+#1782010166
+claude
+#1781869053
+cd docs/pc_review/
+#1781869056
+out
+#1781869057
+pdf
+#1781439421
+vim appStyles.ts 
+#1781439425
+:w
+#1781862057
+update
+#1781862558
+ll
+#1781862574
+vim .claude/:q
+#1781864978
+nvim
+#1781865962
+jzf
+#1781874960
+ld
+#1781874997
+ut
+#1781862094
+claude
+#1781439425
+:w
+#1781869032
+nvim
+#1781869053
+cd docs/pc_review/
+#1781869056
+out
+#1781869057
+pdf
+#1781885759
+cd zkNote/
+#1781875027
+claude
+#1781932466
+claude
+#1782010130
+cd korthagen/
+#1782010387
+source ~/.bashrc
+#1782016251
+zn
+#1782016309
+ls ~/zkNote/
+#1782016315
+cd ~/zkNote/
+#1782016322
+ls -tmp
+#1782016326
+ls -a
+#1782016333
+cd inbox/
+#1782016336
+..
+#1782016338
+cd lit/
+#1782016341
+cd docs
+#1782016360
+cd
+#1782016383
+ls -al
+#1782022038
+zff
+#1782028047
+cd docs/korthagen/
+#1782028047
+l
+#1782028049
+ls
+#1782028053
+vim S5-S7.tex 
+#1782045870
+nvim S5-S7.tex
+#1782046406
+zf
+#1782046436
+vim
+#1782046436
+vim
+#1782131144
+ls
+#1782131148
+cd docs/pc_review/
+#1782131150
+cd papers/
+#1782131150
+l
+#1782028053
+vim S5-S7.tex 
+#1782045870
+nvim S5-S7.tex
+#1782046406
+zf
+#1782046436
+vim
+#1782123461
+cd docs/pc_review/
+#1782123463
+vim bib.bib 
+#1782131249
+l
+#1782131547
+claude
+#1782132276
+nvim bib.bib 
+#1782304378
+ls -la
+#1782304378
+git status
+#1782305228
+ls
+#1782305269
+cp -r dev/helping/docs/knowledge/Otto/ docs
+#1782305273
+l
+#1782305287
+cp -r dev/helping/docs/knowledge/training-transfer/ docs
+#1782339870
+claude
+#1782342333
+claude -c
+#1782344854
+l
+#1782344856
+cd dev
+#1782344856
+l
+#1782344857
+cd ws-map/
+#1782344858
+l
+#1782344859
+l
+#1782346321
+ls
+#1782346326
+cd dotfiles/
+#1782346326
+l

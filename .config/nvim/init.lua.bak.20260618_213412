@@ -1,0 +1,143 @@
+-- =============================================================================
+-- Neovim config for zk (Zettelkasten) notes
+--   方針: ①まず ~/.vimrc を完全継承して「普段使いの vim と同じ挙動」にする
+--         ②WSL2 でのコピー＆ペーストを vim と同じように効かせる
+--         ③zk 用の LSP / リンク挿入を上乗せする
+--   通常の編集は vim、zk ノートは nvim という使い分け。
+-- =============================================================================
+
+-- =============================================================================
+-- ① vim 設定の完全継承
+--   jk でEsc / Spaceリーダー / relativenumber / tab幅2 / list / clipboard=unnamedplus /
+--   p,P での ^M 除去 などをそのまま読み込む（~/.vimrc は dotfiles/.vimrc 実体）。
+-- =============================================================================
+vim.cmd("silent! source ~/.vimrc")
+
+-- =============================================================================
+-- ② WSL2 クリップボード（vim と同じく y/p でWindowsクリップボード連携）
+--   背景: vim は +xterm_clipboard でWSLg経由の組み込みクリップボードが使えるが、
+--         neovim は外部プロバイダに委譲する。xclip等が未導入だと unnamedplus が空振り
+--         して「コピーできない」状態になる。
+--   採用: win32yank.exe（~/.local/bin、sudo不要・UTF-8正確・高速）。
+--         clip.exe は日本語が文字化けするため使わない。
+--   ・コピー: win32yank.exe -i --crlf （Windowsクリップボードへ）
+--   ・貼付け: win32yank.exe -o --lf  （CRLF→LF に変換して取り込み、^M を残さない）
+--   .vimrc の clipboard=unnamedplus はそのまま活き、y/d/c/p が + レジスタを使う。
+-- =============================================================================
+if vim.fn.executable("win32yank.exe") == 1 then
+	vim.g.clipboard = {
+		name = "win32yank",
+		copy = {
+			["+"] = "win32yank.exe -i --crlf",
+			["*"] = "win32yank.exe -i --crlf",
+		},
+		paste = {
+			["+"] = "win32yank.exe -o --lf",
+			["*"] = "win32yank.exe -o --lf",
+		},
+		cache_enabled = 0,
+	}
+end
+
+-- vim では既定でマウスを掴まないため、端末（Windows Terminal）のドラッグ選択→
+-- Ctrl+Shift+C でのコピーが効く。neovim 既定 mouse=nvi はこれを奪うので、vim と
+-- 同じく無効化して端末側コピーも従来どおり使えるようにする。
+vim.opt.mouse = ""
+
+-- =============================================================================
+-- ③ マークダウンを読みやすく（zk ノート閲覧用）
+-- =============================================================================
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.conceallevel = 2 -- [[a|b]] のラベル表示などを綺麗に
+
+-- =============================================================================
+-- ④ zk LSP（zk 自身が language server。`zk lsp` で起動）
+--   * `[[` で既存ノートをタイトル補完して挿入（Obsidian風）
+--   * デッドリンク等の診断、K でホバー、gd で定義（リンク先）ジャンプ
+-- =============================================================================
+vim.lsp.config("zk", {
+	cmd = { "zk", "lsp" },
+	filetypes = { "markdown" },
+	root_markers = { ".zk" }, -- ノートブックのルート（~/zkNote/.zk）を自動検出
+})
+vim.lsp.enable("zk")
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		if client and client:supports_method("textDocument/completion") then
+			-- `[[` などのトリガで自動補完ポップアップ
+			vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
+		end
+		local opts = { buffer = args.buf }
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts) -- リンク先へジャンプ
+		vim.keymap.set("n", "<leader>zb", vim.lsp.buf.references, opts) -- バックリンク一覧
+	end,
+})
+
+-- 補完ポップアップ中は Tab/S-Tab で選択、Enter で確定
+vim.keymap.set("i", "<Tab>", function()
+	return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
+end, { expr = true })
+vim.keymap.set("i", "<S-Tab>", function()
+	return vim.fn.pumvisible() == 1 and "<C-p>" or "<S-Tab>"
+end, { expr = true })
+
+-- =============================================================================
+-- ⑤ <leader>zl : fzf でノートをキーワード検索して [[stem|title]] を挿入
+--   bat でプレビューしながら選べる Notion/Obsidian 風の導線。
+-- =============================================================================
+local function zk_insert_link()
+	local nb = vim.env.ZK_NOTEBOOK_DIR or (vim.env.HOME .. "/zkNote")
+	local tmp = vim.fn.tempname()
+	local sh = string.format(
+		[[cd %q && zk list --quiet --no-pager --format $'{{title}}\t{{filename-stem}}\t{{abs-path}}' ]]
+			.. [[| fzf --delimiter='\t' --with-nth=1 --prompt='link> ' ]]
+			.. [[--preview 'bat --color=always --style=plain --line-range :200 {3}' ]]
+			.. [[--preview-window=right:60%% > %q]],
+		nb,
+		tmp
+	)
+
+	local buf = vim.api.nvim_create_buf(false, true)
+	local width = math.floor(vim.o.columns * 0.9)
+	local height = math.floor(vim.o.lines * 0.85)
+	local win = vim.api.nvim_open_win(buf, true, {
+		relative = "editor",
+		width = width,
+		height = height,
+		row = math.floor((vim.o.lines - height) / 2),
+		col = math.floor((vim.o.columns - width) / 2),
+		style = "minimal",
+		border = "rounded",
+	})
+
+	vim.fn.jobstart({ "bash", "-c", sh }, {
+		term = true,
+		on_exit = function()
+			if vim.api.nvim_win_is_valid(win) then
+				vim.api.nvim_win_close(win, true)
+			end
+			local lines = vim.fn.readfile(tmp)
+			vim.fn.delete(tmp)
+			if #lines == 0 or lines[1] == "" then
+				return
+			end
+			local title, stem = lines[1]:match("^(.-)\t(.-)\t")
+			if not stem or stem == "" then
+				return
+			end
+			vim.api.nvim_put({ string.format("[[%s|%s]]", stem, title) }, "c", true, true)
+		end,
+	})
+	vim.cmd("startinsert")
+end
+
+vim.api.nvim_create_user_command("ZkLink", zk_insert_link, {})
+vim.keymap.set("n", "<leader>zl", zk_insert_link, { desc = "zk: insert link" })
+vim.keymap.set("i", "<C-l>", function()
+	vim.cmd("stopinsert")
+	zk_insert_link()
+end, { desc = "zk: insert link" })

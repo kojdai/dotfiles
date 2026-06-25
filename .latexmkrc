@@ -4,7 +4,10 @@
 #------------------------------------------------------------------
 # Engine and Compiler Options
 #------------------------------------------------------------------
-$pdf_engine = 'lualatex -synctex=1 -interaction=nonstopmode -file-line-error';
+# lualatex を使う（jlreq + luatexja）。
+# 注意: $pdf_engine は latexmk の変数ではなく無効。正しくは $pdf_mode + $lualatex。
+$pdf_mode = 4; # 1=pdflatex, 3=dvipdfmx, 4=lualatex, 5=xelatex
+$lualatex = 'lualatex -synctex=1 -interaction=nonstopmode -file-line-error %O %S';
 $bibtex = 'upbibtex';
 #------------------------------------------------------------------
 # Output Directories

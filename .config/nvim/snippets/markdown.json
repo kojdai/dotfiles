@@ -1,0 +1,20 @@
+{
+  "Today (date)": {
+    "prefix": "today",
+    "body": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+    "description": "今日の日付 YYYY-MM-DD"
+  },
+  "zk link": {
+    "prefix": "zl",
+    "body": "[[${1:stem}|${2:title}]]$0",
+    "description": "zk リンク [[stem|title]]"
+  },
+  "Callout note": {
+    "prefix": "note",
+    "body": [
+      "> [!note] ${1:タイトル}",
+      "> $0"
+    ],
+    "description": "ノート用 callout"
+  }
+}

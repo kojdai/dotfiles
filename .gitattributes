@@ -1,0 +1,2 @@
+# 履歴は追記専用ログとして両マシンの行をすべて残す（マージ衝突を防ぐ）
+history/bash_history merge=union -diff
